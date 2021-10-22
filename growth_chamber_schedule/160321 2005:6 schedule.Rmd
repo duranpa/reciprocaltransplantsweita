@@ -1,0 +1,357 @@
+---
+title: "2005/2006 air-soil mean schedule"
+author: "Tom Ellis"
+date: "21st March 2016"
+output:
+  pdf_document:
+    number_sections: no
+  html_document:
+    number_sections: no
+  word_document:
+    fig_height: 3
+    fig_width: 4
+csl: evolution.csl
+bibliography: arabidopsis.bib
+---
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(echo=F, warning=FALSE, message=FALSE)
+#setwd("/Users/tellis/Documents/arabidopsis_postdoc/soil expt/gc_schedule/")
+```
+
+This document describes growth chamber schedules intended to mimic the climate experienced at the Rödåsen and Castelnuovo sites in the winter 2005/2006. This year was chosen as what appeared to us to be the most representative temperature profile of all the years for which we have data at present (2003-2015). 
+
+This schedule is intended as an update to the one developed by @dittmar2014flowering. Since that paper was published we have access to more extensive climate data from the two sites, and we wanted to be completely sure about how the schedule was constructed. With this in mind, the R code to make the schedule can be viewed in the accompanying `.Rmd` file. An important difference is that the Dittmar schedule appears to sample temperatures for each calendar day randomly from the corresponding dates for 2003-2008. We found this to introduce enormous day-to-day heterogeneity in temperature, which is probably not representative of what plants experience in the field. Instead, we used data for a single year, but attempted to pick the year which appeared to be representative of the patterns seen across years.
+
+## Schedule construction
+The **temperatures** used are based on data recorded by two dataloggers (HOBO Pro Data Logger Series H08-031-08) at each site for the winter 2005/2006. For each calendar day I took the daily maxima recorded for air and soil temperature, and averaged these values. I did the same for the corresponding minimum temperatures. In these schedules, all temperatures given are air-soil means.
+
+To determine **photoperiod** I took data on times for sunrise and sunset in 2005/6 for Sundsvall and Rome from timeanddate.com. @dittmar2014flowering used photoperiod data from the US Naval Observatory, but this database is not available at the time of writing.
+
+Data on **photosynthetically active radiation** (PAR, measured in µEinsteins) are taken from datalogger recordings for 2014/2015. Two loggers at each site record PAR every minute. For each calendar day I pulled out every record for the times between sunrise and sunset for that day, and averaged across these values.
+
+Variation in PAR from day to day is nevertheless enormous (doubtless variation within a day is similarly high as clouds come and go). It isn't immediately clear how this variation will influence the plants, especially when there could be snow around. Since this is not the main focus of our interested, we do not even attempt to mimic this, but instead use a much simpler function which varies smoothly across the seasons. For the Italian schedule PAR is a function of photoperiod, which gives a good fit to empirical data. I used the same function for the Swedish schedule from midwinter onwards. Up to this point I instead used a slow decline over 30 days, followed by near constant darkness until midwinter. This gave a better fit to the emprical patterns we see, whilst still keeping the overall program simple.
+
+Each day has six time points. Daylight runs from the times for sunrise and sunset from timeanddate.com. Temperatures begin to rise from the daily minimum two hours before dawn, reaching their daily maximum two hours after dawn. Likewise, temperatures begin to fall two hours before sunset and reach the next daily minimum two hours after sunset. The growth chambers at Uppsala University can be programmed to ramp the temperature smoothly throughout this time period, and the schedule is designed with this in mind.
+
+## Rödåsen
+The file `roda_2005-6_schedule.csv` contains information to program a growth chamber to imitate the climate experienced at the Rödåsen site between 24th September 2005 and 15th June 2006 (in fact the schedule runs until 30th June in case more time is needed.
+
+In order to shorten the schedule to under six months we have contracted the 121 days from December to March into 31 days by sampling for every fourth day (i.e. 1st December, 5th December, 9th December etc.).
+
+Note that in June sunset is often less than two hours before midnight! This means that time point six will often be on the next day, which warrants attention when entering the schedule.
+
+```{r Import roda data}
+# import temperature data
+roda <- read.csv("growth_chamber_schedule/rodasen_dataloggers.csv")
+# make a unique identifier for the date
+roda$date <- paste(roda$Year, roda$Month, roda$Day, sep="_")
+# pull out only the dates from 05.09.24 to 06.06.30, and contract winter.
+roda <- roda[which(roda$date == "2005_9_1") : which(roda$date=="2006_6_30"),]
+roda <- roda[c(1:91, seq(92, 212, 4), 213:303),]
+
+# average temperatures between soil and air
+roda$chamber_max <- (roda$Max.SoilTempAllLoggerMean. + roda$Max.AirTempAllLoggerMean.)/2
+roda$chamber_min <- (roda$Min.SoilTempAllLoggerMean. + roda$Min.AirTempAllLoggerMean.)/2
+
+# import photoperiod data
+times_roda <- read.csv("growth_chamber_schedule/photoperiod_sundsvall_2005-6.csv", stringsAsFactors = F)
+times_roda <- times_roda[c(1:91, seq(92, 212, 4), 213:303),]
+```
+
+```{r set up roda PAR data, eval=F, include=F}
+# This chunk pulls out dates from the PAR data files.
+# This is exteremly slow, so the output is saved as an R object and recalled later
+# This chunk is therefore not evaluated when the document is compiled, but is retained for future reference.
+
+# chron package is needed to deal with dates
+library(chron)
+# import PAR date
+par_roda1 <- read.table(
+  "growth_chamber_schedule/par_Rodasen23June2015_10314764.txt",
+  sep="\t", header = T, stringsAsFactors = F)
+par_roda2 <- read.table(
+  "growth_chamber_schedule/par_Rodasen23June2015_10422715.txt",
+  sep="\t", header = T, stringsAsFactors = F)
+# convert PAR values to numeric
+par_roda1$par_mE    <- as.numeric(par_roda1$par_mE)
+par_roda2$par_mE    <- as.numeric(par_roda2$par_mE)
+# convert time/date to chron format
+par_roda1$date_time <- as.chron(par_roda1$date_time, format="%m/%d/%Y %H:%M:%S", tz = "UTC")
+par_roda2$date_time <- as.chron(par_roda2$date_time, format="%m/%d/%Y %H:%M:%S", tz = "UTC")
+
+roda_daytimes <- data.frame(paste(paste(roda$Month, roda$Day, roda$Year+9-2000, sep="/"), times_roda$dawn),
+                            paste(paste(roda$Month, roda$Day, roda$Year+9-2000, sep="/"), times_roda$midmorn),
+                            paste(paste(roda$Month, roda$Day, roda$Year+9-2000, sep="/"), times_roda$midaft),
+                            paste(paste(roda$Month, roda$Day, roda$Year+9-2000, sep="/"), times_roda$sunset))
+#roda_daytimes <- roda_daytimes[c(44:58, 158:172),]
+for(c in 1:4) roda_daytimes[,c] <- as.chron(as.character(roda_daytimes[,c]), format="%m/%d/%Y %H:%M")
+
+# empty matrix to store averages over daytime.
+roda_meanPAR    <- numeric(nrow(roda_daytimes))
+# For each calendar day, get average PAR values between sunrise and sunset, for both dataloggers.
+for(i in 1:nrow(roda_daytimes)){
+  # Get values between dawn and sunset for each logger
+  time1 <- par_roda1$par_mE[par_roda1$date_time > roda_daytimes[i,1] & par_roda1$date_time < roda_daytimes[i,4]]
+  time2 <- par_roda2$par_mE[par_roda2$date_time > roda_daytimes[i,1] & par_roda2$date_time < roda_daytimes[i,4]]
+  roda_meanPAR[i] <- mean(c(time1, time2))
+}
+
+save(roda_meanPAR, file="growth_chamber_schedule/roda_meanPAR.Rdata")
+```
+
+```{r roda PAR}
+load("growth_chamber_schedule/roda_meanPAR.Rdata")
+
+# get the maximum and minimum
+roda_maxPAR <- 500#max(dittmar_roda$Desired.PAR)
+roda_minPAR <- 25#min(dittmar_roda$Desired.PAR[dittmar_roda$Time.period==3])
+
+# PAR is a linear function of photoperiod. Of course both a really correlated with the Earth's axis.
+par_roda <- times_roda$nhours[24:213]
+
+# The range of PAR values in Dittmar is 50 to 600. 50 seems rather low, so I've upped it to 100.
+# This gives and intercept of 100, and a slope of 500
+par_roda <- times_roda$nhours-min(times_roda$nhours)
+par_roda <- par_roda / max(par_roda)
+par_roda <- roda_minPAR + (par_roda * (roda_maxPAR - roda_minPAR))
+
+# BUT we're altering the first bit of the roda PAR schedule to fit emperical data a bit better.
+# For the first 30 days, PAR drops from 225 to 25, i.e. 6.66 µE per day
+par_roda[24:54] <- 225 - (200/30)*(0:30)
+par_roda[55:99] <- 25
+# round to nearest integer
+par_roda <- round(par_roda, 0)
+
+```
+
+```{r make roda schedule}
+# Empty vectors for each variable to record
+time_list <- numeric(0)
+temp_list <- numeric(0)
+par_list  <- numeric(0)
+
+# for each calendar day pull out the time and temperature for each schedule change.
+for(i in 24 : nrow(times_roda)){
+  # get the time and PAR for each change
+  time_list <- c(time_list, as.character(times_roda[i, c(5:10)]))
+  par_list  <- c(par_list, c(0, par_roda[i], par_roda[i], par_roda[i], 0, 0))
+  # get the temperature for each change.
+  temp_list <- c(temp_list,
+                 round(
+                   c(roda$chamber_min[i],
+                     roda$chamber_min[i] + (roda$chamber_max[i]-roda$chamber_min[i])/2,
+                     roda$chamber_max[i],
+                     roda$chamber_max[i],
+                     roda$chamber_max[i] - (roda$chamber_max[i]-roda$chamber_min[i+1])/2,
+                     roda$chamber_min[i+1]),
+                   digits = 1))
+}
+
+# combine data into a single data frame.
+roda_schedule <- data.frame(day        = sort(rep(1:190, 6)),
+                            period     = rep(1:6, 190),
+                            time       = time_list,
+                            temperature= temp_list,
+                            par        = par_list)
+roda_schedule$par <- round(roda_schedule$par, 0)
+
+# write to disk
+write.csv(roda_schedule, file="growth_chamber_schedule/roda_2005-6_schedule.csv", row.names = F)
+```
+
+## Castelnuovo
+
+The file `belm_2005-6_schedule.csv` contains information to program a growth chamber to imitate the climate experienced at the Castelnuovo site between 16th November 2005 and 15th April 2006 (in fact the schedule runs until 30th April in case more time is needed).
+
+Since this time period is already under six months it has not been contracted.
+
+```{r import belm data}
+# import data
+belm <- read.csv("growth_chamber_schedule/belmonte_dataloggers.csv")
+
+# make a unique identifier for the date
+belm$date <- paste(belm$Year, belm$Month, belm$Day, sep="_")
+# pull out the data for November 2005 to April 2006 only
+belm <- belm[which(belm$date == "2005_11_1") : which(belm$date=="2006_4_30"),]
+
+# average temperatures between soil and air
+belm$chamber_max <- (belm$Max.SoilTempAllLoggerMean. + belm$Max.AirTempAllLoggerMean.)/2
+belm$chamber_min <- (belm$Min.SoilTempAllLoggerMean. + belm$Min.AirTempAllLoggerMean.)/2
+
+# get photoperiod data
+times_belm <- read.csv("growth_chamber_schedule/photoperiod_rome_2005-6.csv", stringsAsFactors = F)
+
+```
+
+```{r setup belm PAR data, include=F, eval=F}
+# This chunk pulls out dates from the PAR data files.
+# This is exteremly slow, so the output is saved as an R object and recalled later
+# This chunk is therefore not evaluated when the document is compiled, but is retained for future reference.
+
+# chron package is needed to deal with dates
+library(chron)
+
+# import PAR date
+par_belm1 <- read.table(
+  "growth_chamber_schedule/par_Caste1__21April2015_10422714.txt",
+  sep="\t", header = T, stringsAsFactors = F)
+par_belm2 <- read.table(
+  "growth_chamber_schedule/par_Castel_21April2015_10422716.txt",
+  sep="\t", header = T, stringsAsFactors = F)
+# convert PAR values to numeric
+par_belm1$par_mE    <- as.numeric(par_belm1$par_mE)
+par_belm2$par_mE    <- as.numeric(par_belm2$par_mE)
+# convert time/date to chron format
+par_belm1$date_time <- as.chron(par_belm1$date_time, format="%m/%d/%Y %H:%M:%S", tz = "UTC")
+par_belm2$date_time <- as.chron(par_belm2$date_time, format="%m/%d/%Y %H:%M:%S", tz = "UTC")
+
+# make a data frame listing dates and times for each time period.
+belm_daytimes <- data.frame(paste(paste(belm$Month, belm$Day, belm$Year+9-2000, sep="/"), times_belm$dawn),
+                            paste(paste(belm$Month, belm$Day, belm$Year+9-2000, sep="/"), times_belm$midmorn),
+                            paste(paste(belm$Month, belm$Day, belm$Year+9-2000, sep="/"), times_belm$midaft),
+                            paste(paste(belm$Month, belm$Day, belm$Year+9-2000, sep="/"), times_belm$sunset))
+#belm_daytimes <- belm_daytimes[c(44:58, 158:172),]
+for(c in 1:4) belm_daytimes[,c] <- as.chron(as.character(belm_daytimes[,c]), format="%m/%d/%Y %H:%M")
+
+# empty matrix to store averages over daytime.
+belm_meanPAR    <- numeric(nrow(belm_daytimes))
+# For each calendar day, get average PAR values between sunrise and sunset, for both dataloggers.
+for(i in 1:nrow(belm_daytimes)){
+  # Get values between dawn and sunset for each logger
+  time1 <- par_belm1$par_mE[par_belm1$date_time > belm_daytimes[i,1] & par_belm1$date_time < belm_daytimes[i,4]]
+  time2 <- par_belm2$par_mE[par_belm2$date_time > belm_daytimes[i,1] & par_belm2$date_time < belm_daytimes[i,4]]
+  belm_meanPAR[i] <- mean(c(time1, time2))
+}
+
+# save the R objects for later
+save(belm_meanPAR, file ="growth_chamber_schedule/belm_meanPAR.Rdata")
+```
+
+```{r belm PAR}
+load("growth_chamber_schedule/belm_meanPAR.Rdata")
+
+# get the maximum and minimum
+belm_maxPAR <- 700#max(dittmar_belm$Desired.PAR)
+belm_minPAR <- 250#min(dittmar_belm$Desired.PAR[dittmar_belm$Time.period==3])
+
+# PAR is a linear function of photoperiod. Of course both a really correlated with the Earth's axis.
+par_belm <- times_belm$nhours
+
+# The range of PAR values in Dittmar is 50 to 600. 50 seems rather low, so I've upped it to 100.
+# This gives and intercept of 100, and a slope of 500
+par_belm <- times_belm$nhours-min(times_belm$nhours)
+par_belm <- par_belm / max(par_belm)
+par_belm <- belm_minPAR + (par_belm * (belm_maxPAR - belm_minPAR))
+
+# round to nearest integer
+par_belm <- round(par_belm, 0)
+```
+
+```{r belm schedule}
+# Empty vectors for each variable to record
+time_list <- numeric(0)
+temp_list <- numeric(0)
+par_list  <- numeric(0)
+
+# for each calendar day pull out the time and temperature for each schedule change.
+for(i in 16: nrow(times_belm)){
+  # get the times and PAR values for each change
+  time_list <- c(time_list, as.character(times_belm[i, c(5:10)]))
+  par_list  <- c(par_list, c(0, par_belm[i], par_belm[i], par_belm[i], 0, 0))
+  # get the temperature for each change.
+  temp_list <- c(temp_list,
+                 round(
+                   c(belm$chamber_min[i],
+                     belm$chamber_min[i] + (belm$chamber_max[i]-belm$chamber_min[i])/2,
+                     belm$chamber_max[i],
+                     belm$chamber_max[i],
+                     belm$chamber_max[i] - (belm$chamber_max[i]-belm$chamber_min[i+1])/2,
+                     belm$chamber_min[i+1]),
+                   digits = 1))
+}
+
+# combine data into a single data frame.
+belm_schedule <- data.frame(day        = sort(rep(1:166, 6)),
+                            period     = rep(1:6, 166),
+                            time       = time_list,
+                            temperature= temp_list,
+                            par        = par_list)
+
+belm_schedule$par <- round(belm_schedule$par, 0)
+
+# write to disk
+write.csv(belm_schedule, file="growth_chamber_schedule/belm_2005-6_schedule.csv", row.names = F)
+```
+
+## Plot schedules
+The graphs below show how temperature, day length and light intensity vary across the season throughout the two schedules.
+I have included the equivalent curves for the Dittmar schedule for comparison. Vertical grey dashed lines indicate the equivalent calendar months that each date refers to, labelled along the top axes. "W" indicates the contraction of December to March into a single winter.
+
+```{r plot schedule, fig.height=21/2.56, fig.width=16/2.56}
+# import Dittmar schedule
+dittmar_roda <- read.csv("growth_chamber_schedule/dittmar_roda.csv", stringsAsFactors = F)
+dittmar_belm <- read.csv("growth_chamber_schedule/dittmar_belm.csv", stringsAsFactors = F)
+dittmar_belm$Desired.PAR[dittmar_belm$Desired.PAR == "500 to 600"] <- 600
+dittmar_belm$Desired.PAR <- as.numeric(dittmar_belm$Desired.PAR)
+
+# position of the 1st of each month on the x-axis
+xv_roda <- c(8, 39, 69, 100, 130, 161)
+xv_belm <- c(16,  47,  78, 106, 137)
+
+par(mfrow=c(3,2), family="Times",
+    oma = c(5,1,0,0) + 0.1,
+    mar = c(1,4,1,1) + 0.1)
+
+# ============================== TEMPERATURE ===================================================
+plot(c(0,180), c(-10,30), type='n', lwd=1, main="Rödåsen", ylab= "Temperature (ºC)", xlab="")
+for(i in 1:6) lines(c(xv_roda[i], xv_roda[i]), y = c(-10,30), lty='dashed', col='gray')
+text(xv_roda+15, 30, c("O", "N", "W", "A", "M", ""))
+points(dittmar_roda$Temp.C[dittmar_roda$Time.Period == 6], type='l', col='gray', lwd=1)
+points(dittmar_roda$Temp.C[dittmar_roda$Time.Period == 3], type='l', col='gray', lwd=1)
+points(roda_schedule$temperature[roda_schedule$period == 6], type='l', col=1, lwd=2)
+points(roda_schedule$temperature[roda_schedule$period == 3], type='l', col=2, lwd=2)
+
+plot(c(0,150), c(-10,30), type='n', lwd=1, main="Castelnuovo", ylab= "", xlab="")
+for(i in 1:5) lines(c(xv_belm[i], xv_belm[i]), y = c(-10,30), lty='dashed', col='gray')
+text(xv_belm+15, 30, c("D", "J", "F", "M", ""))
+points(dittmar_belm$Temp.C[dittmar_belm$Time.period == 6], type='l', col='gray', lwd=1)
+points(dittmar_belm$Temp.C[dittmar_belm$Time.period == 3], type='l', col='gray', lwd=1)
+points(belm_schedule$temperature[belm_schedule$period == 6], type='l', col=1, lwd=2)
+points(belm_schedule$temperature[belm_schedule$period == 3], type='l', col=2, lwd=2)
+
+legend(5, 0, c("Minimum", "Maximum", "Dittmar"), col=c(1,2, 'gray'), pch=16, bty='n')
+
+# ============================== PHOTOPERIOD ===================================================
+plot(c(0,180), c(5,21), type='n', ylab= "Day length (hours)", xlab="")
+for(i in 1:6) lines(c(xv_roda[i], xv_roda[i]), y = c(5,21), lty='dashed', col='gray')
+text(xv_roda+15, 21, c("O", "N", "W", "A", "M", ""))
+points(times_roda$nhours[24:180], type='l', col=1, lwd=2)
+points(dittmar_roda$Photoperiod..hours.[dittmar_roda$Time.Period==5], type='l', col=2)
+
+plot(c(0,150), c(5,21), type='n', main="", ylab= "", xlab="")
+for(i in 1:5) lines(c(xv_belm[i], xv_belm[i]), y = c(5, 21), lty='dashed', col='gray')
+text(xv_belm+15, 21, c("D", "J", "F", "M", ""))
+points(times_belm$nhours[16:150], lwd=2, type='l')
+points(dittmar_belm$Photoperiod..hours.[dittmar_belm$Time.period==5], type='l', col=2)
+legend(5,8, c("2005/6", "Dittmar"), col=c(1,2), pch=16, bty='n')
+
+# ============================== PAR ===================================================
+plot(c(0,180), c(0,1000), type='n', ylab= "PAR (µEinsteins)", xlab="")
+for(i in 1:6) lines(c(xv_roda[i], xv_roda[i]), y = c(0,1000), lty='dashed', col='gray')
+text(xv_roda+15, 1000, c("O", "N", "W", "A", "M", ""))
+points(roda_meanPAR[24:180], type='l')
+points(dittmar_roda$Desired.PAR[dittmar_roda$Time.Period==3], type = 'l', col=2)
+points(par_roda[24:180], type='l', col=1, lwd=3)
+
+plot(c(0,150), c(0,1000), type='n',main="", ylab= "", xlab="")
+for(i in 1:5) lines(c(xv_belm[i], xv_belm[i]), y = c(0,1000), lty='dashed', col='gray')
+text(xv_belm+15, 1000, c("D", "J", "F", "M", ""))
+points(belm_meanPAR[16:150], type='l')
+points(dittmar_belm$Desired.PAR[dittmar_belm$Time.period==3], type = 'l', col=2)
+points(par_belm[16:150], type='l', col=1, lwd=3)
+
+legend(5,950, c("Schedule PAR", "Daily mean", "Dittmar"), col=c(1,1,2), pch=c(16,1,1), bty='n')
+```
+
+# Literature cited
