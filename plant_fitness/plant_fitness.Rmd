@@ -1,0 +1,118 @@
+---
+title: "Plant fitness"
+author: "Tom Ellis"
+date: "10/29/2021"
+output:
+  bookdown::pdf_book:
+    toc: no
+    keep_tex: no
+    number_sections: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+library(tidyverse)
+library(lmerTest)
+library(ggpubr)
+```
+
+```{r import-data}
+source('plant_fitness/utils.R')
+
+gnoto <- read_csv(
+  "plant_fitness/gnotobiotic_expt_fitness_data.csv",
+  col_types = 'ffffffffidddiii')
+```
+
+If we want to really simplify the presentation of results for plant fitness we can focus on the "main" part of the experiment, namely the treatments on autoclaved Italian and Swedish soil reinocculated with Italian and Swedish soil washes.
+
+The following table shows the results of a model of plant fitness as a function of climate, plant genotype, soil matrix, soil wash, all two-, three- and the four-way interaction, and a random effect accounting for tub. The key points are:
+
+1. There are significant main effects of climate schedule, genotype and soil type, reflecting increased fitness overall in the Italian climate, of the Italian genotype and on Italian soils.
+2. There is a strong genotype x environment interaction, as we would expect under local adaptation to climate.
+3. There is a significant three-way interaction between climate, plant genotype, and soil matrix. I think this is driven in large part by the universally poor survival in the Swedish climate (see plots below).
+4. The effect of soil wash is not significant on its own, nor in any interactions.
+5. Higher-order terms are not significant.
+
+(ref:anova) Analysis of variance in plant fitness on reinoculated soils. Plant fitness is the block-mean of each genotype, and modelled as a function of climate chamber, plant genotype, recipient soil and microbial inoculum, plus all two-, three- and four-way interactions. Block is included as a random effect.
+
+```{r anova-table}
+m2 <- gnoto %>%
+  filter(Soil %in% c("Italy", "Sweden"), Tea %in% c("Italy", "Sweden"), Sterile == 1) %>% 
+  lmer(formula = `Mean(Fruits_sdl)` ~ Climate * geno * Soil * Tea + `N Rows` + (1 | tub))
+
+anova_table <- anova(m2) 
+
+knitr::kable(anova_table, digits = 3,
+             caption = "(ref:anova)")
+
+# gnoto %>%
+#   filter(Soil %in% c("Italy", "Sweden"), Tea %in% c("Italy", "Sweden"), Sterile == 1) %>% 
+#   lmer(formula = `Mean(SurvToFlower)` ~ Climate * geno * Soil * Tea + `N Rows` + (1 | tub)) %>% 
+#   anova
+
+```
+
+I would suggest putting the full table in the supplementary material, and summarise the main points with figures in the main text. Here is a suggestion of how to present this, showing (A) variance explained by the major terms and (B) interaction plots to try and convey the points above. From B I think you can see the significant main effects and the genotype x climate interaction, and I can't think of a better way to illustrate the genotype x soil x climate interaction.
+
+```{r PVE-plus-interactions, fig.width=16.9/2.54, fig.height  = 10/2.54, fig.cap="Plant fitness on reinocculated soils. (A) variance in number of seeds per seedling planted explained in a model including climate chamber, plant genotype, recipient soil, microbial inoculum, and all two-, three- and four-way interactions. Non-significant terms are grouped as 'other terms'. (B) Interaction plots showing plant fitness in each treatment level."}
+p1 <- data.frame(
+  term = row.names(anova_table),
+  p    = anova_table$`Pr(>F)`,
+  mse  = anova_table$`Mean Sq`
+) %>% 
+  group_by(Term = replace(term, p > 0.05, 'Other terms')) %>% 
+  summarise(
+    Variance = sum(mse)
+    ) %>% 
+  mutate(Variance = Variance / sum(Variance)) %>% 
+  mutate(Term = fct_reorder(Term, desc(Variance))) %>% 
+  ggplot(aes(x = Term, y= Variance*100)) +
+  geom_col() +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_x_discrete(
+    labels = c('Climate','Climate x Genotype','Soil', "Genotype", "Other terms", "Climate x Geno. x Soil")
+    ) +
+  labs(
+    y = "% variance explained"
+  )
+
+
+p2 <- gnoto %>% 
+  filter(Soil %in% c("Italy", "Sweden"), Tea %in% c("Italy", "Sweden"), Sterile == 1) %>% 
+  group_by(Climate, Soil, Tea, geno, Sterile) %>% 
+  summarise(
+    mean = mean(`Mean(Fruits_sdl)`)
+  ) %>% 
+  mutate(
+    Soil = ifelse(Soil == "Italy", "Italian soil", "Swedish soil"),
+    Genotype = ifelse(geno == "It", "Italian", "Swedish"),
+    Wash = ifelse( Tea == "Italy", "Italian", "Swedish")
+  ) %>% 
+  ggplot(aes(
+    x = Climate, y = mean, colour = Genotype,
+    shape = Wash, group= paste(Genotype, Wash),
+    )) +
+  geom_point(size = 3) + 
+  geom_line() +
+  facet_grid(~ Soil) +
+  theme_bw() + 
+  scale_colour_manual(values = c('red3', 'blue4')) +
+  theme(
+    legend.position = "bottom",
+    legend.title = element_text(size=10)
+    )+
+  labs(
+    x = "Climate program",
+    y = "Fruits per seedling planted"
+  )+
+  guides(
+    color=guide_legend(nrow=2, byrow=TRUE),
+    shape=guide_legend(nrow=2, byrow=TRUE)
+    )
+
+ggarrange(p1, p2, labels = "AUTO")
+```
+
