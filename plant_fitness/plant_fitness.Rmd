@@ -1,20 +1,21 @@
 ---
 title: "Plant fitness"
 author: ""
-date: "10/29/2021"
+date: "21st December/2021"
 output:
-  bookdown::word_document2:
   bookdown::pdf_book:
     toc: no
     keep_tex: no
     number_sections: false
+
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = FALSE, warning = FALSE, message = FALSE,
   fig.width=16.9/2.54, fig.height  = 20/2.54,
-  cache = TRUE, cache.lazy = TRUE)
+  cache = FALSE, cache.lazy = FALSE)
 
 library(tidyverse)
 library(lmerTest)
@@ -40,15 +41,7 @@ anova <- list()
 
 # Reinoculated soils
 
-Table \@ref(tab:anova-reinoculated) shows ANOVA results for plant fitness as a function of climate, plant genotype, soil matrix, soil wash, all two-, three- and the four-way interaction, and a random effect accounting for tub. The key points are:
-
-1.  There are significant main effects of climate schedule, genotype and soil type, reflecting increased fitness overall in the Italian climate, of the Italian genotype and on Italian soils.
-2.  There is a strong genotype x environment interaction, as we would expect under local adaptation to climate.
-3.  There is a significant three-way interaction between climate, plant genotype, and soil matrix. I think this is driven in large part by the universally poor survival in the Swedish climate (see plots below).
-4.  The effect of soil wash is not significant on its own, nor in any interactions.
-5.  Higher-order terms are not significant.
-
-Results are summarised in figure \@ref(fig:PVE-reinoculated). We would put this in the main text; I have formatted it to fit in a single 8cm column in the printed journal.
+Table \@ref(tab:anova-reinoculated) shows ANOVA results for plant fitness as a function of climate, plant genotype, soil matrix, soil wash, all two-, three- and the four-way interaction, and a random effect accounting for tub. Results are summarised in figure \@ref(fig:PVE-reinoculated).
 
 (ref:anova) Analysis of variance in plant fitness on reinoculated soils. Plant fitness is the block-mean of each genotype, and modelled as a function of climate chamber, plant genotype, recipient soil and microbial inoculum, plus all two-, three- and four-way interactions. Block is included as a random effect.
 
@@ -174,9 +167,7 @@ ggarrange(
 
 # Field vs climate-chamber experiments
 
-Tables \@ref(tab:anova-native) and \@ref(tab:anova-field) show full ANOVA tables for fitness in the chamber and field experiment. In both cases there are significant main effects of climate (site or chamber) and genotype, as well as a strong genotype-by-climate interaction.
-
-Figure \@ref(fig:field-vs-native) shows variance explained by each term, plus interaction plots. I did not include a cartoon illustrating the treatments being compared, because this involves data from outside of the experiment.
+Tables \@ref(tab:anova-native) and \@ref(tab:anova-field) show full ANOVA tables for fitness in the chamber and field experiment. Figure \@ref(fig:field-vs-native) shows variance explained by each term, plus iteraction plots.
 
 (ref:native) Analysis of variance in plant fitness on native, non-autoclaved soils. Plant fitness is the block-mean of each genotype, and modelled as a function of climate chamber, plant genotype, and recipient soil, plus all two- and three--way interactions. Block is included as a random effect.
 
@@ -388,51 +379,48 @@ ggarrange(
 
 ```
 
+# Native vs sterilised vs repopulated soils
 
+Table \@ref(tab:anova-nsr) and figure \@ref(fig:nsr-plot) show plant fitness on native (untreated), sterilised, and sterilised-and-reinoculated soils. 
 
-# Sterilised vs non-sterilised soils
+(ref:anova-nsr) Analysis of variance in plant fitness on native (untreated), sterilised, and sterilised-and-reinoculated soils. Plant fitness is the block-mean of each genotype, and modelled as a function of climate chamber, plant genotype, recipient soil, sterilisation-reinoculation treatment, plus all two-, three- and four-way interactions. Block is included as a random effect, and the number of plants in each black as an additional fixed effect.
 
-The following table shows the results of a model of plant fitness as a function of climate, plant genotype, soil matrix, and whether soil was sterilised or not, plus all two-, three- and the four-way interaction, and a random effect accounting for tub. The key points are:
-
-1.  There is strong evidence for higher fitness in the Italian climate chamber.
-2.  There is strong evidence for a significant effect of sterilisation, with plant fitness being higher on sterilised soils.
-3.  Despite the confounding with sterilisation, there is still strong evidence for the genotype x environment interaction expected under local adaptation.
-4.  There is moderate evidence for a soil-by-sterilisation interaction, with the effect of sterilisation being weaker on Swedish than on Italian soil.
-5.  There is moderate evidence for a three-way interaction between climate chamber, soil type and sterilisation treatment.
-
-(ref:sterilised-anova) Analysis of variance in plant fitness on sterilised vs non-sterilised soils. Plant fitness is the block-mean of each genotype, and modelled as a function of climate chamber, plant genotype, recipient soil and whether soils were sterilised, plus all two-, three- and four-way interactions. Block is included as a random effect.
-
-```{r anova-sterilised}
+```{r anova-nsr}
 anova$sterilise <- 
   gnoto %>%
-  filter(Soil %in% c("Italy", "Sweden"), Tea == "No") %>% 
-  lmer(formula = fruits_per_seedling ~ Climate * geno * Soil * Sterile + plants_per_block + (1 | tub)) %>% 
+  filter(! trt %in% c(4,7, 15, 19)) %>% 
+  mutate(
+    Treatment = ifelse(Sterile == 0, "Native", "Sterile"),
+    Treatment = ifelse(Tea != "No", "Reinoculated", Treatment),
+    Treatment = fct_relevel(Treatment, "Sterile", after = 2)
+  ) %>%  
+  lmer(formula = fruits_per_seedling ~ Climate * geno * Soil * Treatment + plants_per_block + (1 | tub)) %>% 
   anova %>% 
   mutate(`Var. explained` = `Sum Sq` / sum(`Sum Sq`))
 
 knitr::kable(anova$sterilise, digits = 3,
-             caption = "(ref:sterilised-anova)")
+             caption = "(ref:anova-nsr)")
 ```
 
-Figure \@ref(fig:PVE-sterilised) shows the variance explained by major terms, and an interaction plot of group means. It is configured to have the same layout as figure \@ref(fig:PVE-reinoculated).
-
-```{r treatments-sterilised, include=FALSE}
+```{r nsr-treatments, include=FALSE}
 
 sterilised <- list()
 
 font_size= 0.7
 par(mar = c(0,4,0,0))
-plot(c(0,9), c(0,-3), type='n', axes=F, xlab = "", ylab="")
+plot(c(0,13), c(1,-4), type='n', axes=F, xlab = "", ylab="")
 # Draw boxes under the plot
-rect((1:8)-0.5, -0.5, (1:8)+0.5, -1, col = rep(c("#eb624c", "#1d3d90ff"), each=4))
-rect((1:8)-0.5, -1,   (1:8)+0.5, -1.5,  col = rep(c("#eb624c", "#1d3d90ff"), each=2))
-rect((1:8)-0.5, -1.5, (1:8)+0.5, -2, col = c('gray70',0))
-rect((1:8)-0.5, -2,   (1:8)+0.5, -2.5, col = 0)
+rect((1:12)-0.5, -0.5, (1:12)+0.5, -1, col = rep(c("#eb624c", "#1d3d90ff"), each=6))
+rect((1:12)-0.5, -1,   (1:12)+0.5, -1.5,  col = rep(c("#eb624c", "#1d3d90ff"), each=3))
+rect((1:12)-0.5, -1.5, (1:12)+0.5, -2, col = c('gray70',0,0))
+rect((1:12)-0.5, -2,   (1:12)+0.5, -2.5, 
+     col = c(0, 0, "#eb624c", 0, 0, "#1d3d90ff")
+     )
 # Insert labels in the boxes
-text(1:8, -0.75, rep(c("It", "Sw"), each= 4), cex=font_size)
-text(1:8, -1.25, rep(c("It", "Sw"), each=2), cex=font_size)
-text(1:8, -1.75, c("No", "Yes", "No", "Yes"), cex=font_size)
-text(1:8, -2.25, c("-", "-", "-", "-"), cex=font_size)
+text(1:12, -0.75, rep(c("It", "Sw"), each= 6), cex=font_size)
+text(1:12, -1.25, rep(c("It", "Sw"), each=3), cex=font_size)
+text(1:12, -1.75, c("No", "Yes", "Yes"), cex=font_size)
+text(1:12, -2.25, c("-", "-", "It", "-", "-", "Sw"), cex=font_size)
 
 text(0.4, -0.75, "Chamber",    xpd=NA, adj = c(1,0.5), cex=font_size)
 text(0.4, -1.25, "Soil",       xpd=NA, adj = c(1,0.5), cex=font_size)
@@ -442,87 +430,8 @@ text(0.4, -2.25, "Inoculum",   xpd=NA, adj = c(1,0.5), cex=font_size)
 sterilised$trt<- recordPlot()
 ```
 
-(ref:sterilised) Plant fitness on sterilised vs unsterilised native soils. (A) Illustration of the treatments being compared. (B) Variance in number of seeds per seedling planted explained in a model including climate chamber, plant genotype, recipient soil, whether soils were sterilised or not, and all two-, three- and four-way interactions. Non-significant terms are grouped as 'other terms'. (C) Interaction plots showing plant fitness in each treatment.
-
-```{r PVE-sterilised, fig.cap=, fig.width=8/2.54, fig.height=18/2.54, fig.cap="(ref:sterilised)", fig.height  = 18/2.54}
-sterilised$pve <- data.frame(
-  term = row.names(anova$sterilise),
-  p    = anova$sterilise$`Pr(>F)`,
-  mse  = anova$sterilise$`Mean Sq`
-) %>% 
-  group_by(Term = replace(term, p > 0.05, 'Other terms')) %>% 
-  summarise(
-    Variance = sum(mse)
-  ) %>% 
-  mutate(Variance = Variance / sum(Variance)) %>% 
-  mutate(Term = fct_relevel(
-    Term,
-    "Climate", "geno", "Soil", "Sterile", "Climate:geno", "Soil:Sterile", "Climate:geno:Sterile"
-  )) %>% 
-  arrange(Term) %>% 
-  ggplot(aes(x = Term, y= Variance*100)) +
-  geom_col() +
-  theme_bw() +
-  theme(
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    axis.title.x = element_blank()
-  ) +
-  scale_x_discrete(
-    labels = c('Chamber', "Genotype", "Soil", "Sterilisation", 'Chamber x\nGenotype',  "Sterilisation\nx Soil", "Chamber x\nGeno. x Soil", "Other terms")
-  ) +
-  labs(
-    y = "% variance explained"
-  )
-
-sterilised$interaction <- gnoto %>% 
-  filter(Soil %in% c("Italy", "Sweden"), Tea == "No") %>% 
-  group_by(Climate, Soil, Tea, geno, Sterile) %>% 
-  summarise(
-    mean = mean(fruits_per_seedling)
-  ) %>% 
-  mutate(
-    Soil = ifelse(Soil == "Italy", "Italian soil", "Swedish soil"),
-    Genotype = ifelse(geno == "It", "Italian", "Swedish"),
-    Sterilised = ifelse( Sterile == 1, "Yes", "No")
-  ) %>% 
-  ggplot(aes(
-    x = Climate, y = mean, colour = Genotype,
-    shape = Sterilised, group= paste(Genotype, Sterilised),
-  )) +
-  geom_point(size = 3) + 
-  geom_line() +
-  facet_grid(~ Soil) +
-  theme_bw() + 
-  scale_colour_manual(values = c('#eb624c', '#1d3d90ff')) +
-  theme(
-    legend.position = "bottom",
-    legend.title = element_text(size=8),
-    legend.text = element_text(size=8)
-  )+
-  labs(
-    x = "Climate chamber",
-    y = "Fruits per seedling planted"
-  )+
-  guides(
-    color=guide_legend(nrow=2, byrow=TRUE),
-    shape=guide_legend(nrow=2, byrow=TRUE)
-  )
-
-ggarrange(
-  sterilised$trt,
-  sterilised$pve,
-  sterilised$interaction,
-  nrow=3, labels = "AUTO", heights = c(1,2,3))
-```
-
-## Native vs sterilised vs repopulated soils
-
-Figure \@ref(fig:native-sterile-repopulated) shows the increase in fitness on sterilised soils followed by the drop when you repopulate them.
-
-(ref:nsr) Mean plant fitness in unsterilised native soils, sterilised soils, and soils sterilised and reinoculated with its native inoculum.
-
-```{r native-sterile-repopulated, fig.cap="(ref:nsr)", fig.width=8/2.54, fig.height=11/2.54}
-gnoto %>% 
+```{r nsr-means}
+sterilised$means <- gnoto %>% 
   filter(! trt %in% c(4,7, 15, 19)) %>% 
   group_by(Climate, Soil, Sterile, Tea, geno) %>% 
   summarise(
@@ -548,19 +457,71 @@ gnoto %>%
     y = "Fruits per seedling planted"
   )+
   theme(
-    legend.position = "bottom",
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    legend.title = element_text(size=8),
-    legend.text = element_text(size=8)
-) +
-  guides(
-    colour = guide_legend(
-      nrow=2, byrow=TRUE, override.aes = list(linetype = 0, shape = 15)
-      ),
-    # color=guide_legend(),
-    shape=guide_legend(nrow=2, byrow=TRUE)
-  )
+    legend.position = "none"
+    # axis.text.x = element_text(angle = 45, hjust = 1),
+    # legend.title = element_text(size=8),
+    # legend.text = element_text(size=8)
+)
+  # guides(
+  #   colour = guide_legend(
+  #     nrow=2, byrow=TRUE, override.aes = list(linetype = 0, shape = 15)
+  #     ),
+  #   # color=guide_legend(),
+  #   shape=guide_legend(nrow=2, byrow=TRUE)
+  # )
 
 ```
 
+
+```{r nsr-interactions}
+
+sterilised$interactions <- gnoto %>% 
+  filter(! trt %in% c(4,7, 15, 19)) %>% 
+  group_by(Climate, Soil, Sterile, Tea, geno) %>% 
+  summarise(
+    mean = mean(fruits_per_seedling)
+  ) %>% 
+  mutate(
+    Soil = ifelse(Soil == "Italy", "Italian soil", "Swedish soil"),
+    Genotype = ifelse(geno == "It", "Italian", "Swedish"),
+    Treatment = ifelse(Sterile == 0, "Native", "Sterile"),
+    Treatment = ifelse(Tea != "No", "Reinoculated", Treatment),
+    Treatment = fct_relevel(Treatment, "Sterile", after = 2)
+  ) %>% 
+  rename(Chamber = Climate) %>%
+
+  ggplot(aes(
+    x = Chamber, y = mean,
+    shape = Soil, colour = Genotype, group = paste(Genotype, Soil) 
+    ))+
+  geom_point(size=3) +
+  geom_line() +
+  facet_grid( Soil ~ Treatment) +
+theme_bw() +
+  scale_colour_manual(values = c('#eb624c', '#1d3d90ff')) +
+  labs(
+    y = "Fruits per seedling planted"
+  )+
+  theme(
+    legend.position = "top",
+    # axis.text.x = element_text(angle = 45, hjust = 1),
+    # legend.title = element_text(size=8),
+    # legend.text = element_text(size=8)
+) +
+  guides(
+    colour = guide_legend(
+      # nrow=2, byrow=TRUE, 
+      override.aes = list(linetype = 0, shape = 15)
+      ),
+    # shape=guide_legend(nrow=2, byrow=TRUE)
+  )
+```
+
+(ref:nsr-plot) Plant fitness on native (untreated), sterilised, and sterilised-and-reinoculated soils. (A) Illustration of the treatments being compared. (B) Changes in genotype-treatment means in each soil treatment. (C) Interaction plots illustrating the changes in the chamber x genotype interaction in each soil treatment.
+
+```{r nsr-plot, fig.width=18/2.54, fig.height=20/2.54, fig.cap= "(ref:nsr-plot)"}
+top_row <- ggarrange(sterilised$trt, sterilised$means, labels = c("A", "B"), heights = c(1,2))
+
+ggarrange(top_row, sterilised$interactions, nrow=2, labels = c("-", "C"), heights = c(3,5))
+```
 
