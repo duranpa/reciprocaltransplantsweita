@@ -56,7 +56,9 @@ Results are summarised in figure \@ref(fig:PVE-reinoculated). We would put this 
 anova$reinoculated <- gnoto %>%
   filter(Soil %in% c("Italy", "Sweden"), Tea %in% c("Italy", "Sweden"), Sterile == 1) %>%
   lmer(formula = fruits_per_seedling ~ Climate * geno * Soil * Tea + plants_per_block + (1 | tub)) %>% 
-  anova
+  anova %>% 
+  mutate(`Var. explained` = `Sum Sq` / sum(`Sum Sq`))
+  
 
 knitr::kable(anova$reinoculated, digits = 3,
              caption = "(ref:anova)")
@@ -231,7 +233,8 @@ field_native$trt_field<- recordPlot()
 anova$native <- gnoto %>%
   filter(Soil %in% c("Italy", "Sweden"), Sterile == 0) %>% 
   lmer(formula = fruits_per_seedling ~ Climate * geno * Soil + plants_per_block + (1 | tub)) %>% 
-  anova() 
+  anova() %>% 
+  mutate(`Var. explained` = `Sum Sq` / sum(`Sum Sq`))
 
 anova$native %>% 
   knitr::kable(
@@ -244,7 +247,8 @@ anova$native %>%
 
 ```{r anova-field}
 anova$field <- lmer(formula = fruits_per_seedling ~ Site * Genotype * Soil + (1|Tray), data = field) %>% 
-  anova
+  anova() %>% 
+  mutate(`Var. explained` = `Sum Sq` / sum(`Sum Sq`))
 
 knitr::kable(
   anova$field,
@@ -402,9 +406,9 @@ The following table shows the results of a model of plant fitness as a function 
 anova$sterilise <- 
   gnoto %>%
   filter(Soil %in% c("Italy", "Sweden"), Tea == "No") %>% 
-  lmer(formula = fruits_per_seedling ~ Climate * geno * Soil * Sterile + plants_per_block + (1 | tub))
-
-anova$sterilise <- anova(anova$sterilise) 
+  lmer(formula = fruits_per_seedling ~ Climate * geno * Soil * Sterile + plants_per_block + (1 | tub)) %>% 
+  anova %>% 
+  mutate(`Var. explained` = `Sum Sq` / sum(`Sum Sq`))
 
 knitr::kable(anova$sterilise, digits = 3,
              caption = "(ref:sterilised-anova)")
