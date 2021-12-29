@@ -3,6 +3,7 @@ title: "Plant fitness"
 author: ""
 date: "21st December/2021"
 output:
+  bookdown:::word_document2:
   bookdown::pdf_book:
     toc: no
     keep_tex: no
@@ -59,7 +60,7 @@ knitr::kable(anova$reinoculated, digits = 3,
 
 ```
 
-(ref:reinoculated) Plant fitness on reinocculated soils. (A) Illustration of the treatments being compared. (B) variance in number of seeds per seedling planted explained in a model including climate chamber, plant genotype, recipient soil, microbial inoculum, and all two-, three- and four-way interactions. Non-significant terms are grouped as 'other terms'. (C) Interaction plots showing plant fitness in each treatment.
+(ref:reinoculated) Plant fitness on reinoculated soils. (A) Illustration of the treatments being compared. (B) variance in number of seeds per seedling planted explained in a model including climate chamber, plant genotype, recipient soil, microbial inoculum, and all two-, three- and four-way interactions. Non-significant terms are grouped as 'other terms'. (C) Interaction plots showing plant fitness in each treatment.
 
 ```{r treatments-reinoculated, include=FALSE}
 
@@ -234,12 +235,24 @@ anova$native %>%
   )
 ```
 
-(ref:field) Analysis of variance of plant fitness on native, non-autoclaved soils in the chamber experiment, and the field experiment presented by Thiergart *et al.* (2020). Fitness of individual plants is modelled as a function of experimental site, plant genotype, and recipient soil, plus all two- and three-way interactions. Block is included as a random effect.
+(ref:field) Analysis of variance of plant fitness on native, non-autoclaved soils in the chamber experiment, and the field experiment presented by Thiergart *et al.* (2020). Block-mean fitness of each genotype is modelled as a function of experimental site, plant genotype, and recipient soil, plus all two- and three-way interactions. Block is included as a random effect.
 
 ```{r anova-field}
-anova$field <- lmer(formula = fruits_per_seedling ~ Site * Genotype * Soil + (1|Tray), data = field) %>% 
+# Calculate block-mean fitness for each genotype
+anova$field <- field %>% 
+  mutate(Block = paste(Site, Block, sep="_")) %>% 
+  group_by(Block, Site, Soil, Genotype) %>% 
+  summarise(
+    fruits_per_seedling = mean(fruits_per_seedling)
+  ) %>% 
+  lmer(formula = fruits_per_seedling ~ Site * Genotype * Soil + (1|Block), data = .) %>% 
   anova() %>% 
   mutate(`Var. explained` = `Sum Sq` / sum(`Sum Sq`))
+
+
+# anova$field <- lmer(formula = fruits_per_seedling ~ Site * Genotype * Soil + (1|Tray), data = field) %>% 
+#   anova() %>% 
+#   mutate(`Var. explained` = `Sum Sq` / sum(`Sum Sq`))
 
 knitr::kable(
   anova$field,
