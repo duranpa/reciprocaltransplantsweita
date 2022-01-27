@@ -49,4 +49,14 @@ p <- ggplot(points, aes(x=x, y=y, color=Soil_Fraction, shape=Climate_soil))+
 #calculate variance explained by different factors
 adonis(bray_curtis ~ Soil *Chamber * Genotype,      data = d, permutations = 999, method = "bray", strata = NULL) 
 
+#plot variances
+##substracted output information from adonis and created a dataframe with variance and design information
+
+variance<- read.table("variance.txt", header=TRUE, sep="\t")
+var<- variance[variance$Experiment %in% c("Chamber"), ]
+
+p <- ggplot(var, aes(x=Factor, y=Variance)) +
+  geom_bar(stat="identity")
+p+facet_wrap(vars(Microbe), scales="free")+theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+
 
