@@ -1,0 +1,56 @@
+RepopulatedSwedishvsRepopulatedchangedclimateSwedish	RepopulatedSwedishvsChangedsoilclimateSwedish	RepopulatedSwedishvsChangedsoilSwedish
+ Xanthobacteraceae	 RhizobialesIncertaeSedis	 Haliangiaceae
+ Solibacteraceae	 Microbacteriaceae	 RhizobialesIncertaeSedis
+ Ardenticatenaceae	 SM2D12	 Parachlamydiaceae
+ Gemmataceae	 Haliangiaceae	 Microbacteriaceae
+ Micropepsaceae	 Xanthobacteraceae	 Koribacteraceae
+ Comamonadaceae	 Koribacteraceae	 Xanthobacteraceae
+ AcidobacteriaceaeSubgroup1	 Pyrinomonadaceae	 SM2D12
+ Nocardioidaceae	notassigned	 Pyrinomonadaceae
+ Devosiaceae	 Pseudonocardiaceae	 Bacillaceae
+ Rickettsialesfa	 Abditibacteriaceae	 Sphingomonadaceae
+ Alcaligenaceae	 Parachlamydiaceae	notassigned
+ Simkaniaceae	 Sphingobacteriaceae	 Abditibacteriaceae
+ Rhodocyclaceae	 Flavobacteriaceae	 AcidobacteriaceaeSubgroup1
+ Kineosporiaceae	 Roseiflexaceae	 Paracaedibacteraceae
+	 Kineosporiaceae	 Nitrosomonadaceae
+	 Devosiaceae	 Kineosporiaceae
+	 Rhodocyclaceae	 Bryobacteraceae
+	 Rickettsialesfa	 Rickettsialesfa
+	 Streptosporangiaceae	 Streptosporangiaceae
+	 Ardenticatenaceae	 Geodermatophilaceae
+	 Solibacteraceae	 Rhodocyclaceae
+	 Spirochaetaceae	 Gemmatimonadaceae
+	 AcidobacteriaceaeSubgroup1	 Rhizobiaceae
+	 Bacillaceae	 Phycisphaeraceae
+	 67-14	 UnknownFamily
+	 Simkaniaceae	 Bacteriovoracaceae
+	 Geminicoccaceae	 Methylophilaceae
+	 Oxalobacteraceae	 Devosiaceae
+	 UnknownFamily	 Burkholderiaceae
+	 Beijerinckiaceae	 Pseudonocardiaceae
+	 Geodermatophilaceae	 Spirochaetaceae
+	 Phycisphaeraceae	 AKIW781
+	 Steroidobacteraceae	 Pseudomonadaceae
+	 Nitrosomonadaceae	 Planococcaceae
+	 URHD0088	 Flavobacteriaceae
+	 env.OPS17	 Inquilinaceae
+	 Alcaligenaceae	 Labraceae
+	 Rhizobiaceae	 Pleomorphomonadaceae
+	 Fimbriimonadaceae	 Pseudohongiellaceae
+	 Bryobacteraceae	 Simkaniaceae
+	 Sphingomonadaceae	 Polyangiaceae
+	 Polyangiaceae	 67-14
+	 Micavibrionaceae	 Micavibrionaceae
+	 Phaselicystidaceae	 env.OPS17
+	 Microscillaceae	 Micrococcaceae
+	 Oligoflexalesfa	 Desulfitobacteriaceae
+	 Planococcaceae	 Oxalobacteraceae
+		 Fodinicurvataceae
+		 Steroidobacteraceae
+		 Sphingobacteriaceae
+		 Pedosphaeraceae
+		 Holosporaceae
+		 Nocardioidaceae
+		 Mycobacteriaceae
+		 Phaselicystidaceae
