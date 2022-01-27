@@ -28,6 +28,8 @@ asv_table_its1.txt
 design_complete.txt
 asv_table_b5.txt
 asv_table_its1.txt
+long_asv_table_norm_enriched_b5.txt
+long_asv_table_norm_enriched_its1.txt
 
 #Supplementary Figure 4 c + e:
 design_asfield.txt
