@@ -23,7 +23,7 @@ shapes <- data.frame(group=c("Italian_Italian", "Italian_Swedish", "Swedish_Ital
                      shape=c(16, 17, 1, 2))					 
 colors <- data.frame(group=c("Italian_Soil", "Swedish_Soil"),
                      color=c("#000000", "#000000"))
-#calculate Bray Curstis distances
+#calculate coordinates based on Bray Curtis distances
 k <- 2
 pcoa <- cmdscale(bray_curtis, k=k, eig=T)
 points <- pcoa$points
