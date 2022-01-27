@@ -162,50 +162,6 @@ swe<- read.table("enriched_families_swedish.txt", header=TRUE, sep="\t")
 ggVennDiagram(ita, label_alpha = 0)
 ggVennDiagram(swe, label_alpha = 0)
 
-
-##Supplementary Figure 5
-##selected Chamber and genotype for constraining so that their effect is more apparent
-##constrained version
-
-source("cpcoa.func.R")
-sqrt_transform <- T
-capscale.rate <- capscale(bray_curtis ~ Chamber+Genotype +Condition(Soil+Wash+Library),
-                          data=d, add=F, sqrt.dist=sqrt_transform)
-
-perm_anova.rate <- anova.cca(capscale.rate)
-print(perm_anova.rate)
-
-# generate variability tables and calculate confidence intervals for the variance
-
-var_tbl.rate <- variability_table(capscale.rate)
-
-eig <- capscale.rate$CCA$eig
-
-variance <- var_tbl.rate["constrained", "proportion"]
-p.val <- perm_anova.rate[1, 4]
-points <- capscale.rate$CCA$wa[,1:2]
-points <- as.data.frame(points)
-colnames(points) <- c("x", "y")
-
-colors <- data.frame(group=c("Italian", "Swedish"),
-                     color=c("#eb624c", "#1d3d90"))		
-shapes <- data.frame(group=c("Italian","Swedish"),
-                     shape=c(16, 17))	
-
-points <- cbind(points, d[match(rownames(points), d$SampleID), ])
-
-p <- ggplot(points, aes(x=x, y=y, color=Genotype, shape=Chamber)) +
-  geom_point(alpha=.7, size=6) +
-  scale_colour_manual(values=as.character(colors$color)) +
-  scale_shape_manual(values=shapes$shape)+
-  labs(x=paste("cPCoA 1 (", format(100 * eig[1] / sum(eig), digits=4), "%)", sep=""),
-       y=paste("cPCoA 2 (", format(100 * eig[2] / sum(eig),	 digits=4), "%)", sep="")) + 
-  ggtitle(paste(format(100 * variance, digits=2), " % of variance; p=",
-                format(p.val, digits=2),
-                sep="")) +
-  theme(legend.position="right")+ main_theme
-
-
 FUNGI
 ##Figure 3b
 design<- read.table("design_filt2.txt", header=TRUE, sep="\t", check.names=FALSE)
