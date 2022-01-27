@@ -20,12 +20,12 @@ asv_table_b5.txt
 asv_table_its1.txt
 
 #Supplementary Figure 1:
-design_asfield.txt
+design_controls.txt
 asv_table_b5.txt
 asv_table_its1.txt
 
 #Supplementary Figure 2:
-design_asfield.txt
+design_complete.txt
 asv_table_b5.txt
 asv_table_its1.txt
 
