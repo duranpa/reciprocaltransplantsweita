@@ -54,16 +54,16 @@ p <- ggplot(points, aes(x=x, y=y, color=Condition, shape=Microbe))+
 
 ##to calculate input for SuppFig4c
 #write files to read them as ASV
-write.table(asv_raref, "asv_raref_forenrich_s2_.txt", sep="\t")
-write.table(d, "d_forenrich_s2s3.txt", sep="\t")
+write.table(asv_raref, "asv_raref_forenrich.txt", sep="\t")
+write.table(d, "d_forenrich.txt", sep="\t")
 
 library('tidyverse')
 library('magrittr')
 library('DESeq2')
 library('sva')
 
-asvRaw <- read_tsv('asv_raref_forenrich_s2.txt')
-expDesign <- read_tsv('d_forenrich_s2s3.txt') 
+asvRaw <- read_tsv('asv_raref_forenrich.txt')
+expDesign <- read_tsv('d_forenrich.txt') 
 
 countData <- asvRaw %>%
   mutate_all(~ifelse(. == 0, 1, .)) %>%
@@ -109,6 +109,38 @@ res <- cbind.data.frame(as.matrix(mcols(asvres)[, 1:10]), counts(asvres, normali
   as_tibble %>%
   bind_cols(resRaw) 
 
-write.table(resRaw, "enriched_raw_repop_b5_autoclaved.txt", sep="\t")
+write.table(resRaw, "enriched_raw_repop_autoclaved.txt", sep="\t")
 write.table(res, "enriched_res_repop_autoclaved.txt", sep="\t")
+
+##calculated relative abundances of ASVs
+asv_table_norm <- apply(asv_table, 2, function(x) x/sum(x))
+
+#remove low abundant ASV
+threshold <- .05
+idx <- rowSums(asv_table_norm * 100 > threshold) >= 1
+asv_table <- asv_table[idx, ]
+asv_table_norm <- asv_table_norm[idx, ]
+
+#change format to long version
+otu_long <- melt(asv_table_norm, id.vars = "Group.1", variable.name = "Strain")
+
+#write dataframe manually add design + taxnomic information, and leave only those ASVs enriched in the step before
+#bacteria
+otu_long<- read.table("long_asv_table_norm_enriched_b5.txt", header=TRUE, sep="\t")
+#fungi
+otu_long<- read.table("long_asv_table_norm_enriched_its1.txt", header=TRUE, sep="\t")
+
+#calculate mean across samples and standard error
+sd<- ddply(otu_long, c("Microbe", "Condition","ASV", "Phylum"), summarise, N=length(value), mean=mean(value), sd=sd(value), se=sd/sqrt(N))
+
+colors <- data.frame(group=c("Control", "Repopulated"),
+                     color=c("#000000","#808080"))		
+
+#plot
+p<- ggplot(sd, aes(x = ASV, y = mean, fill= Condition)) +     geom_bar(stat = "identity", colour="black", position=position_dodge(0.9))+
+  scale_fill_manual(values=as.character(colors$color)) +
+  geom_errorbar(aes(ymin=mean-se, ymax=mean+se), width=.1, position=position_dodge(0.9))+
+  theme(axis.text.x = element_text(size=10, angle=45))	 
+p+facet_grid(Microbe~Phylum, scales="free_x", space = "free_x")
+
 
