@@ -14,10 +14,14 @@ at the experimental sites in Sweden and Italy in the winter of 2005-6.
 ### Microbiota data analysis
 Files and scripts to recreate figures shown in the manuscript. Each script requires different input files:
 
-#Figure 3, Supplementary Figure 5:
+#Figure 3:
 design_filt2.txt
 asv_table_b5.txt
 asv_table_its1.txt
+enriched_families_italian_b5.txt
+enriched_families_italian_its1.txt
+enriched_families_swedish_b5.txt
+enriched_families_swedish_its.txt
 
 #Supplementary Figure 1:
 design_controls.txt
@@ -42,6 +46,10 @@ design_its1.txt
 otu_table_check_b5.txt
 otu_table_check_its1.txt
 
+#Supplementary Figure 5:
+design_filt2.txt
+asv_table_b5.txt
+asv_table_its1.txt
 
 ## Dependencies
 
