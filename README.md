@@ -12,9 +12,7 @@ Files and scripts to recreate the growth chamber programs mimicking the climates
 at the experimental sites in Sweden and Italy in the winter of 2005-6.
 
 ### Microbiota data analysis
-Files and scripts to recreate figures shown in the manuscript. Each script requires different input files:
-
-
+Files and scripts to recreate figures shown in the manuscript. ASV tables and files that are shared across several figures are found in the main path reciprocaltransplantsweita/, otherwise each folder contains all the necessary files and scripts to reproduce the figures. All analysis are run within the same folder and no external files need to be called, with two exceptions (see below).
 
 ## Dependencies
 
@@ -29,9 +27,9 @@ Files and scripts to recreate figures shown in the manuscript. Each script requi
 - DESeq2
 
 for microbiota analysis, load the following scripts first:
-#for constrained principal componen analysis
+#for constrained principal components analysis
 cpcoa.R
 #for plotting aesthetics
-plotting_functions
+plotting_functions.R
 
 
