@@ -1,0 +1,3 @@
+In Supplementary Figure 5:
+1) Based on the calculated dissimilarity between microbial communities in samples of the reciprocal transplant experiment (Bray Curtis dissimilarities)and the Permutational Multivariate Analysis of Variance for Figure 3 , we noticed that (significant) climatic and (non-significant) genotype effects, and their interaction (significant) are not visible in Figure3c
+2) Therefore, we decided to re-calculate the coordinates on the samples based only on the variance explained by climate and genotype effects. For this, we used the capscale function to remove all effects from other factors in the sample distribution, and used the output to recalculate the sample coordinates and plot it again (seen in SuppFig5)
