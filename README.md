@@ -26,6 +26,18 @@ To reproduce each folder's figure, download the required files to your working d
 ## Dependencies
 
 ### R (minimum version 4.1)
+
+For analysis of plant fitness:
+
+- tidyverse
+- lmerTest
+- ggpubr
+- cowplot
+- gridGraphics
+- rmarkdown
+
+For microbial analyses:
+
 - chron
 - ggplot2
 - GUnifrac
