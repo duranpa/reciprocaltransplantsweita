@@ -1,4 +1,4 @@
-# reciprocaltransplantsweita
+# Climate drives rhizosphere microbiome variation and divergent selection between geographically distant Arabidopsis populations
 
 Scripts and raw data for Duran, Ellis et al. 2021, investigating the
 interactions between soil microbes, abiotic soil matrix, climate, and plant 
@@ -10,6 +10,14 @@ interactions between soil microbes, abiotic soil matrix, climate, and plant
 
 Files and scripts to recreate the growth chamber programs mimicking the climates
 at the experimental sites in Sweden and Italy in the winter of 2005-6.
+
+### Randomisation
+
+Scripts to create the randomisation plan to set up the experiment.
+
+### Plant fitness
+
+Scripts to analyse results relating to differences in plant fitness.
 
 ### Microbiota data analysis
 Files and scripts to recreate figures shown in the manuscript. ASV tables and files that are shared across several figures are found in the main path reciprocaltransplantsweita/, otherwise each folder contains all the necessary files and scripts to reproduce the figures. All analysis are run within the same folder and no external files need to be called, with two exceptions (see below). 
