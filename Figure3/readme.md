@@ -1,0 +1,5 @@
+In Figure 3:
+1) We first calculate the dissimilarity between microbial communities in samples of the reciprocal transplant experiment (Bray Curtis dissimilarities) and we calculate the coordinates for each sample to plot them (seen in Figure 3c)
+2) Then, we perform a Permutational Multivariate Analysis of Variance based on the Bray-Curtis dissimilarities, including the factors we test for in the experiment (Table 2). We use these values to generate a new file (shared across all other analysis, variance.txt) to plot the differences of variance explained across all factors and their interactions (Figure3b)
+3) We assess the bacterial and fungal families that are significantly different across the treatments. For that, we first aggregate the ASV table at the family level, by adding up sequencing reads. Then, we use this Family table for the differential abundance analysis, using the DESeq package
+4) From the output, we select those families that are significantly different at a p<0.05, and we generate new tables (enriched_families_italian_b5.txt etc) to plot the venn diagrams showing the overlap of families changed in each condition (Figure 3d)

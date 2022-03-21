@@ -1,0 +1,3 @@
+In Supplementary Figure 4:
+1) We first calculate the dissimilarity between microbial communities in field samples and those samples which mimik the conditions in the field experiment (Bray Curtis dissimilarities) and we calculate the coordinates for each sample to plot them (seen in SuppFig4c+d)
+2) Then, we perform a Permutational Multivariate Analysis of Variance based on the Bray-Curtis dissimilarities, including the factors we included in the field experiment. We use these values to generate a new file (shared across all other analysis, variance.txt) to plot the differences of variance explained across all factors and their interactions (SuppFig4e+f)

@@ -1,0 +1,340 @@
+SampleID	Chamber	Soil	Wash	Genotype	Parentalline	Planted	Treatment	Fraction	Incubationtime	Replicate	Library	Microbe	Condition	Condition_microbe	Microbe_planted	Changed_chamber	Changed_soil	Changed_both	Changed_genotype
+6month.1	Italian	Swedish	Swedish	Unplanted	Unplanted	Unplanted	Third	Soil	6months	1	6	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Unplanted	no	no	no	yes
+6month.33	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	6months	2	5	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	no
+6month.35	Italian	Italian	Italian	Unplanted	Unplanted	Unplanted	Third	Soil	6months	3	7	Italian	Repopulated	Repopulated_Italian	Italian_Unplanted	no	no	no	yes
+6month.36	Italian	Swedish	Swedish	Unplanted	Unplanted	Unplanted	Third	Soil	6months	2	6	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Unplanted	no	no	no	yes
+6month.38	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	6months	1	5	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	no
+6month.5	Italian	Italian	Italian	Unplanted	Unplanted	Unplanted	Third	Soil	6months	2	7	Italian	Repopulated	Repopulated_Italian	Italian_Unplanted	no	no	no	yes
+6month.62	Italian	Italian	Swedish	Unplanted	Unplanted	Unplanted	Fourth	Soil	6months	1	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+6month.67	Italian	Swedish	Italian	Unplanted	Unplanted	Unplanted	Fourth	Soil	6months	2	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Unplanted	no	yes	no	yes
+6month.70	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	6months	3	5	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	no
+6month.71	Italian	Italian	Swedish	Unplanted	Unplanted	Unplanted	Fourth	Soil	6months	3	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+6month.72	Italian	Swedish	Swedish	Unplanted	Unplanted	Unplanted	Third	Soil	6months	3	6	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Unplanted	no	no	no	yes
+6month.75	Italian	Italian	Swedish	Unplanted	Unplanted	Unplanted	Fourth	Soil	6months	2	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+6month.77	Italian	Swedish	Italian	Unplanted	Unplanted	Unplanted	Fourth	Soil	6months	1	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Unplanted	no	yes	no	yes
+6month.82	Italian	Swedish	Italian	Unplanted	Unplanted	Unplanted	Fourth	Soil	6months	3	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Unplanted	no	yes	no	yes
+6month.9	Italian	Italian	Italian	Unplanted	Unplanted	Unplanted	Third	Soil	6months	1	5	Italian	Repopulated	Repopulated_Italian	Italian_Unplanted	no	no	no	yes
+8month.104	Swedish	Italian	Swedish	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	1	7	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Unplanted	no	yes	no	yes
+8month.110	Swedish	Swedish	Italian	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	1	7	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Unplanted	yes	yes	yes	yes
+8month.112	Swedish	Italian	Swedish	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	3	7	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Unplanted	no	yes	no	yes
+8month.114	Swedish	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	2	7	Italian	Changed_climate	Changed_climate_Italian	Italian_Unplanted	yes	no	no	no
+8month.115	Swedish	Swedish	Swedish	Unplanted	Unplanted	Unplanted	Third	Soil	8months	2	8	Swedish	Repopulated	Repopulated_Swedish	Swedish_Unplanted	no	no	no	yes
+8month.120	Swedish	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	1	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Unplanted	yes	no	no	no
+8month.124	Swedish	Swedish	Italian	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	2	7	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Unplanted	yes	yes	yes	yes
+8month.128	Swedish	Swedish	Swedish	Unplanted	Unplanted	Unplanted	Third	Soil	8months	1	7	Swedish	Repopulated	Repopulated_Swedish	Swedish_Unplanted	no	no	no	yes
+8month.131	Swedish	Swedish	Swedish	Unplanted	Unplanted	Unplanted	Third	Soil	8months	3	7	Swedish	Repopulated	Repopulated_Swedish	Swedish_Unplanted	no	no	no	yes
+8month.135	Swedish	Italian	Italian	Unplanted	Unplanted	Unplanted	Third	Soil	8months	3	8	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Unplanted	no	no	no	yes
+8month.145	Swedish	Swedish	Swedish	Unplanted	Unplanted	Unplanted	Third	Soil	8months	2	7	Swedish	Repopulated	Repopulated_Swedish	Swedish_Unplanted	no	no	no	yes
+8month.15	Italian	Swedish	Swedish	Unplanted	Unplanted	Unplanted	Third	Soil	8months	1	7	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Unplanted	no	no	no	yes
+8month.152	Swedish	Italian	Italian	Unplanted	Unplanted	Unplanted	Third	Soil	8months	2	7	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Unplanted	no	no	no	yes
+8month.153	Swedish	Swedish	Italian	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	3	7	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Unplanted	yes	yes	yes	yes
+8month.159	Swedish	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	3	7	Italian	Changed_climate	Changed_climate_Italian	Italian_Unplanted	yes	no	no	no
+8month.165	Swedish	Italian	Italian	Unplanted	Unplanted	Unplanted	Third	Soil	8months	1	8	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Unplanted	no	no	no	yes
+8month.22	Italian	Italian	Swedish	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	2	7	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+8month.24	Italian	Italian	Swedish	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	1	7	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+8month.33	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	2	7	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	no
+8month.35	Italian	Italian	Italian	Unplanted	Unplanted	Unplanted	Third	Soil	8months	2	7	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	yes
+8month.38	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	3	7	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	no
+8month.66	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	1	7	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	no
+8month.67	Italian	Swedish	Italian	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	1	7	Italian	Changed_soil	Changed_soil_Italian	Italian_Unplanted	no	yes	no	yes
+8month.75	Italian	Italian	Swedish	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	3	7	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+8month.77	Italian	Swedish	Italian	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	2	7	Italian	Changed_soil	Changed_soil_Italian	Italian_Unplanted	no	yes	no	yes
+8month.82	Italian	Swedish	Italian	Unplanted	Unplanted	Unplanted	Fourth	Soil	8months	3	7	Italian	Changed_soil	Changed_soil_Italian	Italian_Unplanted	no	yes	no	yes
+8month.91	Swedish	Italian	Swedish	Italian	Deadplant	Planted	Fourth	Soil	8months	2	7	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Unplanted	no	yes	no	yes
+after.incub.Ita.Treat.1	None	Italian	None	None	None	None	First	Soil	2weeks	1	1	Italian	Test	Test_Italian	Italian_None	no	no	no	no
+after.incub.Ita.Treat.3	None	Italian	Swedish	None	None	None	Third	Soil	2weeks	1	1	Swedish	Test_changed_soil	Test_changed_soil_Swedish	Swedish_None	no	no	no	yes
+after.incub.Ita.Treat.4	None	Italian	Italian	None	None	None	Fourth	Soil	2weeks	1	1	Italian	Test_repopulated	Test_repopulated_Italian	Italian_None	no	no	no	yes
+after.incub.Swe4.Treat.1	None	Swedish	None	None	None	None	First	Soil	2weeks	1	1	Swedish	Test	Test_Swedish	Swedish_None	no	no	no	no
+after.incub.Swe4.Treat.3	None	Swedish	Swedish	None	None	None	Third	Soil	2weeks	1	1	Swedish	Test_repopulated	Test_repopulated_Swedish	Swedish_None	no	no	no	yes
+after.incub.Swe4.Treat.4	None	Swedish	Italian	None	None	None	Fourth	Soil	2weeks	1	1	Italian	Test_changed_soil	Test_changed_soil_Italian	Italian_None	no	no	no	yes
+I.106.S	Swedish	Italian	None	Italian	Deadplant	Planted	First	Soil	8months	1	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	yes	no	no	no
+I.110.S	Swedish	Swedish	Italian	Italian	Deadplant	Planted	Fourth	Soil	8months	3	8	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Italian	yes	yes	yes	no
+I.113.S	Swedish	Italian	Swedish	Italian	Deadplant	Planted	Fourth	Soil	8months	2	8	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Italian	no	yes	no	yes
+I.118.S	Swedish	Italian	None	Italian	Deadplant	Planted	First	Soil	8months	2	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	yes	no	no	no
+I.119.S	Swedish	Swedish	None	Italian	Deadplant	Planted	First	Soil	8months	2	8	Swedish	Control	Control_Swedish	Swedish_Italian	no	no	no	no
+I.120.S	Swedish	Italian	None	Italian	Deadplant	Planted	First	Soil	8months	3	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	yes	no	no	no
+I.124.S	Swedish	Swedish	Italian	Italian	Deadplant	Planted	Fourth	Soil	8months	2	8	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Italian	yes	yes	yes	no
+I.128.S	Swedish	Swedish	Swedish	Italian	Deadplant	Planted	Third	Soil	8months	1	8	Swedish	Repopulated	Repopulated_Swedish	Swedish_Italian	no	no	no	yes
+I.136.S	Swedish	Swedish	None	Italian	Deadplant	Planted	First	Soil	8months	3	8	Swedish	Control	Control_Swedish	Swedish_Italian	no	no	no	no
+I.144.S	Swedish	Swedish	Swedish	Italian	Deadplant	Planted	Third	Soil	8months	2	8	Swedish	Repopulated	Repopulated_Swedish	Swedish_Italian	no	no	no	yes
+I.150.S	Swedish	Swedish	Italian	Italian	Deadplant	Planted	Fourth	Soil	8months	1	8	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Italian	yes	yes	yes	no
+I.16.R	Italian	Swedish	Italian	Italian	It24	Planted	Fourth	Root	6months	1	8	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+I.16.S	Italian	Swedish	Italian	Italian	It24	Planted	Fourth	Soil	6months	1	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+I.169.S	Swedish	Italian	Swedish	Italian	Deadplant	Planted	Fourth	Soil	8months	3	8	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Italian	no	yes	no	yes
+I.175.S	Swedish	Swedish	Swedish	Italian	Deadplant	Planted	Third	Soil	8months	3	8	Swedish	Repopulated	Repopulated_Swedish	Swedish_Italian	no	no	no	yes
+I.21.R	Italian	Swedish	Swedish	Italian	It32	Planted	Third	Root	6months	3	8	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Italian	no	no	no	yes
+I.24.R	Italian	Italian	Swedish	Italian	It41	Planted	Fourth	Root	6months	1	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+I.24.S	Italian	Italian	Swedish	Italian	It41	Planted	Fourth	Soil	6months	1	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+I.25.R	Italian	Swedish	None	Italian	It24	Planted	First	Root	6months	1	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+I.25.S	Italian	Swedish	None	Italian	It24	Planted	First	Soil	6months	1	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+I.27.R	Italian	Swedish	None	Italian	It32	Planted	First	Root	6months	2	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+I.27.S	Italian	Swedish	None	Italian	It32	Planted	First	Soil	6months	2	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+I.29.R	Italian	Italian	Italian	Italian	It32	Planted	Third	Root	6months	3	5	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+I.29.S	Italian	Italian	Italian	Italian	It32	Planted	Third	Soil	6months	3	5	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+I.32.R	Italian	Italian	None	Italian	It24	Planted	First	Root	6months	1	5	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+I.32.S	Italian	Italian	None	Italian	It24	Planted	First	Soil	6months	1	5	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+I.33.R	Italian	Italian	None	Italian	It32	Planted	First	Root	6months	2	5	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+I.33.S	Italian	Italian	None	Italian	It32	Planted	First	Soil	6months	2	5	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+I.41.R	Italian	Swedish	Italian	Italian	It24	Planted	Fourth	Root	6months	2	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+I.41.S	Italian	Swedish	Italian	Italian	It24	Planted	Fourth	Soil	6months	2	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+I.48.R	Italian	Italian	Swedish	Italian	It24	Planted	Fourth	Root	6months	2	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+I.48.S	Italian	Italian	Swedish	Italian	It24	Planted	Fourth	Soil	6months	2	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+I.49.R	Italian	Italian	None	Italian	It32	Planted	First	Root	6months	3	5	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+I.49.S	Italian	Italian	None	Italian	It32	Planted	First	Soil	6months	3	5	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+I.5.R	Italian	Italian	Italian	Italian	It32	Planted	Third	Root	6months	1	5	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+I.5.S	Italian	Italian	Italian	Italian	It32	Planted	Third	Soil	6months	1	5	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+I.62.R	Italian	Italian	Swedish	Italian	It24	Planted	Fourth	Root	6months	3	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+I.62.S	Italian	Italian	Swedish	Italian	It24	Planted	Fourth	Soil	6months	3	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+I.67.R	Italian	Swedish	Italian	Italian	It32	Planted	Fourth	Root	6months	3	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+I.67.S	Italian	Swedish	Italian	Italian	It32	Planted	Fourth	Soil	6months	3	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+I.69.R	Italian	Italian	Swedish	Italian	It24	Planted	Fourth	Root	6months	4	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+I.69.S	Italian	Italian	Swedish	Italian	It24	Planted	Fourth	Soil	6months	4	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+I.70.R	Italian	Italian	None	Italian	It15	Planted	First	Root	6months	4	5	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+I.70.S	Italian	Italian	None	Italian	It15	Planted	First	Soil	6months	4	5	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+I.77.R	Italian	Swedish	Italian	Italian	It24	Planted	Fourth	Root	6months	4	8	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+I.77.S	Italian	Swedish	Italian	Italian	It24	Planted	Fourth	Soil	6months	4	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+I.78.R	Italian	Swedish	None	Italian	It32	Planted	First	Root	6months	3	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+I.78.S	Italian	Swedish	None	Italian	It32	Planted	First	Soil	6months	3	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+I.8.R	Italian	Swedish	Swedish	Italian	It32	Planted	Third	Root	6months	1	8	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Italian	no	no	no	yes
+I.84.R	Italian	Swedish	None	Italian	It15	Planted	First	Root	6months	4	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+I.84.S	Italian	Swedish	None	Italian	It15	Planted	First	Soil	6months	4	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+I.87.R	Italian	Italian	Italian	Italian	It32	Planted	Third	Root	6months	4	5	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+I.87.S	Italian	Italian	Italian	Italian	It32	Planted	Third	Soil	6months	4	5	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+I.9.R	Italian	Italian	Italian	Italian	It41	Planted	Third	Root	6months	2	5	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+I.9.S	Italian	Italian	Italian	Italian	It41	Planted	Third	Soil	6months	2	5	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+I.91.S	Swedish	Italian	Swedish	Italian	Deadplant	Planted	Fourth	Soil	8months	1	8	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Italian	no	yes	no	yes
+I.99.S	Swedish	Swedish	None	Italian	Deadplant	Planted	First	Soil	8months	1	8	Swedish	Control	Control_Swedish	Swedish_Italian	no	no	no	no
+Ita.Treat.1	None	Italian	None	None	None	None	First	Soil	0weeks	1	1	Italian	Test	Test_Italian	Italian_None	no	no	no	no
+Ita.Treat.3	None	Italian	Swedish	None	None	None	Third	Soil	0weeks	1	1	Swedish	Test_changed_soil	Test_changed_soil_Swedish	Swedish_None	no	no	no	yes
+Ita.Treat.4	None	Italian	Italian	None	None	None	Fourth	Soil	0weeks	1	1	Italian	Test_repopulated	Test_repopulated_Italian	Italian_None	no	no	no	yes
+ReciprocalRevision1	Swedish	Italian	Italian	Swedish	Sw7	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision10	Swedish	Italian	Italian	Swedish	Sw43	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision100	Swedish	Italian	none	Italian	It15	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	yes	no	no	no
+ReciprocalRevision102	Swedish	Italian	none	Italian	It15	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	yes	no	no	no
+ReciprocalRevision103	Italian	Italian	Italian	Italian	It41	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision104	Italian	Italian	Italian	Swedish	Sw11	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision105	Italian	Italian	Italian	Italian	It24	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision106	Italian	Italian	Italian	Italian	It41	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision107	Italian	Italian	Italian	Swedish	Sw7	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision108	Italian	Italian	Italian	Swedish	Sw43	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision109	Italian	Italian	Italian	Italian	It41	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision11	Italian	Italian	Swedish	Swedish	Sw7	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+ReciprocalRevision110	Italian	Italian	Italian	Swedish	Sw47	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision111	Italian	Swedish	none	Italian	It24	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+ReciprocalRevision112	Italian	Swedish	none	Italian	It32	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+ReciprocalRevision113	Swedish	Italian	none	Swedish	Sw47	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+ReciprocalRevision114	Swedish	Italian	none	Swedish	Sw7	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+ReciprocalRevision115	Italian	Swedish	none	Italian	It41	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+ReciprocalRevision116	Italian	Italian	none	Swedish	Sw43	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+ReciprocalRevision117	Italian	Italian	none	Italian	It32	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision118	Italian	Swedish	none	Swedish	Sw7	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+ReciprocalRevision119	Italian	Swedish	none	Swedish	Sw7	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+ReciprocalRevision12	Italian	Swedish	Swedish	Swedish	Sw43	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Unplanted	no	no	no	yes
+ReciprocalRevision120	Italian	Swedish	none	Swedish	Sw47	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+ReciprocalRevision121	Italian	Swedish	none	Swedish	Sw7	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+ReciprocalRevision122	Swedish	Swedish	Swedish	Italian	It32	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision123	Swedish	Swedish	Swedish	Italian	It	Planted	Third	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision124	Swedish	Swedish	none	Swedish	It	Planted	First	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision125	Swedish	Swedish	Swedish	Swedish	Sw11	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision126	Swedish	Swedish	Swedish	Swedish	Sw7	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision127	Swedish	Swedish	none	Italian	It15	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Italian	no	no	no	no
+ReciprocalRevision128	Swedish	Swedish	none	Swedish	Sw43	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision129	Italian	Italian	none	Swedish	Sw11	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+ReciprocalRevision13	Swedish	Swedish	Italian	Italian	It24	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Unplanted	yes	yes	yes	yes
+ReciprocalRevision130	Italian	Italian	none	Swedish	Sw47	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+ReciprocalRevision131	Italian	Italian	none	Italian	It24	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision132	Italian	Italian	none	Italian	It24	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision133	Italian	Italian	none	Swedish	Sw11	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+ReciprocalRevision134	Italian	Italian	Swedish	Italian	It41	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+ReciprocalRevision135	Italian	Italian	Swedish	Italian	It15	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+ReciprocalRevision136	Italian	Swedish	none	Italian	It15	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+ReciprocalRevision137	Italian	Italian	Swedish	Swedish	Sw43	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+ReciprocalRevision138	Italian	Italian	Swedish	Italian	It24	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+ReciprocalRevision139	Italian	Italian	Swedish	Swedish	Sw43	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+ReciprocalRevision14	Swedish	Swedish	Italian	Italian	It24	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Unplanted	yes	yes	yes	yes
+ReciprocalRevision140	Swedish	Swedish	Swedish	Italian	It	Planted	Third	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision141	Swedish	Italian	Swedish	Italian	It24	Planted	15	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Italian	no	yes	no	yes
+ReciprocalRevision142	Swedish	Italian	Swedish	Swedish	Sw47	Planted	15	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+ReciprocalRevision143	Swedish	Italian	Swedish	Swedish	Sw7	Planted	15	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+ReciprocalRevision144	Swedish	Swedish	none	Italian	It15	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Italian	no	no	no	no
+ReciprocalRevision145	Swedish	Swedish	Italian	Italian	It24	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Italian	yes	yes	yes	no
+ReciprocalRevision146	Swedish	Swedish	none	Swedish	Sw7	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision147	Swedish	Swedish	Italian	Italian	It32	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Italian	yes	yes	yes	no
+ReciprocalRevision148	Swedish	Swedish	none	Italian	It32	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Italian	no	no	no	no
+ReciprocalRevision149	Swedish	Swedish	Italian	Swedish	Sw11	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Swedish	yes	yes	yes	yes
+ReciprocalRevision15	Swedish	Italian	Italian	Swedish	Sw7	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Unplanted	no	no	no	yes
+ReciprocalRevision150	Swedish	Swedish	Swedish	Italian	It41	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision151	Swedish	Swedish	Swedish	Italian	It41	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision152	Swedish	Swedish	Italian	Italian	It24	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Italian	yes	yes	yes	no
+ReciprocalRevision153	Swedish	Swedish	Swedish	Swedish	Sw43	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision154	Swedish	Swedish	none	Swedish	Sw43	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision155	Swedish	Swedish	Swedish	Swedish	Sw11	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision156	Italian	Italian	Italian	Italian	It24	Planted	3	Root	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision157	Italian	Swedish	none	Italian	It15	Planted	5	Root	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	yes	no	no	no
+ReciprocalRevision158	Italian	Italian	Swedish	Italian	It41	Planted	4	Root	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+ReciprocalRevision159	Italian	Italian	Swedish	Italian	It15	Planted	4	Root	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+ReciprocalRevision16	Swedish	Italian	Swedish	Swedish	Sw7	Planted	15	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Unplanted	no	yes	no	yes
+ReciprocalRevision160	Italian	Italian	Italian	Italian	It41	Planted	3	Root	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision161	Italian	Italian	Italian	Swedish	Sw11	Planted	3	Root	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision162	Italian	Italian	Italian	Swedish	Sw47	Planted	3	Root	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision163	Italian	Italian	Swedish	Swedish	Sw7	Planted	4	Root	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+ReciprocalRevision164	Italian	Italian	none	Italian	It32	Planted	1	Root	6months		9	Italian	Control	Control_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision165	Swedish	Italian	Italian	Swedish	Sw7	Planted	14	Root	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision166	Swedish	Italian	Swedish	Swedish	Sw7	Planted	15	Root	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+ReciprocalRevision167	Swedish	Italian	Swedish	Swedish	Sw	Planted	Fourth	Root	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+ReciprocalRevision17	Swedish	Swedish	Italian	Italian	It24	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Unplanted	yes	yes	yes	yes
+ReciprocalRevision18	Swedish	Italian	Italian	Italian	It32	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Unplanted	no	no	no	yes
+ReciprocalRevision19	Swedish	Swedish	Swedish	Swedish	It32	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Unplanted	no	no	no	yes
+ReciprocalRevision2	Swedish	Italian	Italian	Italian	It24	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision20	Swedish	Italian	none	Swedish	Sw11	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Unplanted	yes	no	no	no
+ReciprocalRevision21	Swedish	Italian	Italian	Swedish	Sw7	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Unplanted	no	no	no	yes
+ReciprocalRevision22	Swedish	Italian	none	Italian	It32	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	yes	no	no	no
+ReciprocalRevision23	Swedish	Swedish	Swedish	Italian	It41	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Unplanted	no	no	no	yes
+ReciprocalRevision24	Italian	Italian	Swedish	Swedish	Sw47	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+ReciprocalRevision25	Swedish	Swedish	Swedish	Swedish	Sw7	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Unplanted	no	no	no	yes
+ReciprocalRevision27	Swedish	Italian	Swedish	Swedish	Sw7	Planted	15	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Unplanted	no	yes	no	yes
+ReciprocalRevision28	Swedish	Italian	Swedish	Italian	It15	Planted	15	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Unplanted	no	yes	no	yes
+ReciprocalRevision29	Swedish	Italian	Swedish	Italian	It41	Planted	15	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Unplanted	no	yes	no	yes
+ReciprocalRevision3	Swedish	Italian	Italian	Italian	It41	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision30	Swedish	Italian	Italian	Italian	It41	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Unplanted	no	no	no	yes
+ReciprocalRevision31	Swedish	Italian	Italian	Swedish	Sw43	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Unplanted	no	no	no	yes
+ReciprocalRevision33	Italian	Swedish	Italian	Swedish	Sw7	Planted	7	Soil	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Unplanted	no	yes	no	yes
+ReciprocalRevision34	Italian	Italian	Italian	Swedish	Sw43	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Unplanted	no	no	no	yes
+ReciprocalRevision35	Italian	Italian	Italian	Swedish	Sw7	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Unplanted	no	no	no	yes
+ReciprocalRevision36	Italian	Swedish	Swedish	Italian	It32	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Unplanted	no	no	no	yes
+ReciprocalRevision37	Italian	Italian	none	Unplanted	Unplanted	Unplanted	First	Soil	NA		9	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	no
+ReciprocalRevision38	Italian	Italian	none	Swedish	Sw11	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	no
+ReciprocalRevision39	Italian	Italian	none	Italian	It24	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	no
+ReciprocalRevision4	Swedish	Italian	Italian	Swedish	Sw7	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision40	Italian	Italian	none	Swedish	Sw11	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Unplanted	no	no	no	no
+ReciprocalRevision41	Italian	Italian	Swedish	Swedish	Sw11	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+ReciprocalRevision42	Italian	Swedish	Swedish	Swedish	Sw7	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Unplanted	no	no	no	yes
+ReciprocalRevision43	Italian	Italian	Swedish	Swedish	Sw47	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+ReciprocalRevision44	Italian	Swedish	Swedish	Swedish	Sw43	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Unplanted	no	no	no	yes
+ReciprocalRevision45	Italian	Swedish	Italian	Italian	It32	Planted	7	Soil	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Unplanted	no	yes	no	yes
+ReciprocalRevision46	Italian	Swedish	Swedish	Swedish	Sw11	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Unplanted	no	no	no	yes
+ReciprocalRevision47	Italian	Italian	Swedish	Swedish	Sw43	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Unplanted	yes	yes	yes	yes
+ReciprocalRevision48	Italian	Italian	Italian	Swedish	Sw43	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Unplanted	no	no	no	yes
+ReciprocalRevision5	Swedish	Italian	Italian	Italian	It24	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision50	Italian	Italian	Italian	Swedish	Sw11	Planted	3	Soil	6months		9	Italian	Repopulated	Repopulated_Italian	Italian_Unplanted	no	no	no	yes
+ReciprocalRevision51	Swedish	Italian	none	Swedish	Sw11	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+ReciprocalRevision52	Swedish	Italian	none	Italian	It15	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	yes	no	no	no
+ReciprocalRevision53	Swedish	Italian	none	Italian	It24	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	yes	no	no	no
+ReciprocalRevision54	Swedish	Italian	none	Swedish	Sw11	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+ReciprocalRevision55	Italian	Swedish	Italian	Italian	It32	Planted	7	Soil	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+ReciprocalRevision56	Italian	Swedish	Swedish	Swedish	Sw47	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision57	Italian	Swedish	Italian	Italian	It32	Planted	7	Soil	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+ReciprocalRevision58	Italian	Swedish	Italian	Swedish	Sw11	Planted	7	Soil	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+ReciprocalRevision6	Swedish	Italian	Italian	Swedish	Sw43	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision60	Italian	Swedish	Italian	Swedish	Sw7	Planted	7	Soil	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+ReciprocalRevision61	Swedish	Italian	Swedish	Italian	It	Planted	Fourth	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Italian	no	yes	no	yes
+ReciprocalRevision62	Swedish	Swedish	none	Italian	It41	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Italian	no	no	no	no
+ReciprocalRevision63	Swedish	Italian	Swedish	Swedish	Sw11	Planted	15	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+ReciprocalRevision64	Swedish	Italian	Swedish	Italian	It15	Planted	15	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Italian	no	yes	no	yes
+ReciprocalRevision65	Swedish	Swedish	none	Swedish	Sw7	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision66	Swedish	Swedish	Swedish	Swedish	Sw7	Planted	19	Soil	8months		9	Swedish	Repopulated	Repopulated_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision67	Swedish	Italian	Swedish	Swedish	Sw11	Planted	15	Soil	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+ReciprocalRevision68	Swedish	Swedish	none	Swedish	Sw43	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision69	Italian	Italian	Swedish	Swedish	Sw7	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+ReciprocalRevision7	Swedish	Italian	Italian	Italian	It24	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision70	Italian	Italian	Swedish	Italian	It15	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Italian	yes	yes	yes	yes
+ReciprocalRevision71	Swedish	Swedish	Italian	Swedish	Sw	Planted	Fourth	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Swedish	yes	yes	yes	yes
+ReciprocalRevision72	Italian	Italian	Swedish	Swedish	Sw47	Planted	4	Soil	6months		9	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+ReciprocalRevision73	Swedish	Swedish	Italian	Swedish	Sw7	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Swedish	yes	yes	yes	yes
+ReciprocalRevision74	Swedish	Swedish	Italian	Italian	It41	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Italian	yes	yes	yes	no
+ReciprocalRevision75	Swedish	Swedish	Italian	Swedish	Sw11	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Swedish	yes	yes	yes	yes
+ReciprocalRevision76	Swedish	Swedish	Italian	Italian	It32	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Italian	yes	yes	yes	no
+ReciprocalRevision77	Swedish	Swedish	Italian	Swedish	Sw11	Planted	18	Soil	8months		9	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Swedish	yes	yes	yes	yes
+ReciprocalRevision78	Italian	Swedish	Swedish	Italian	It15	Planted	8	Root	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision79	Italian	Swedish	Swedish	Italian	It32	Planted	8	Root	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision8	Swedish	Italian	Italian	Italian	It32	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision80	Italian	Swedish	Italian	Italian	It32	Planted	7	Root	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+ReciprocalRevision81	Italian	Swedish	Italian	Swedish	Sw43	Planted	7	Root	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+ReciprocalRevision82	Italian	Italian	none	Swedish	Sw	Planted	First	Root	NA		9	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+ReciprocalRevision83	Italian	Swedish	Italian	Swedish	Sw7	Planted	7	Root	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+ReciprocalRevision84	Italian	Swedish	Italian	Italian	It32	Planted	7	Root	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+ReciprocalRevision85	Italian	Swedish	Italian	Swedish	Sw7	Planted	7	Root	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+ReciprocalRevision86	Italian	Swedish	Italian	Italian	It24	Planted	7	Root	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+ReciprocalRevision87	Swedish	Italian	Italian	Swedish	Sw43	Planted	14	Root	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision88	Swedish	Italian	Swedish	Swedish	Sw11	Planted	15	Root	8months		9	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+ReciprocalRevision89	Swedish	Italian	Italian	Swedish	Sw43	Planted	14	Root	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Swedish	no	no	no	yes
+ReciprocalRevision9	Swedish	Italian	Italian	Italian	It41	Planted	14	Soil	8months		9	Italian	Repopulated_changed_climate	Repopulated_changed_climate_Italian	Italian_Italian	no	no	no	no
+ReciprocalRevision90	Italian	Swedish	Italian	Swedish	Sw7	Planted	7	Soil	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+ReciprocalRevision91	Italian	Swedish	Swedish	Italian	It15	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision92	Italian	Swedish	Swedish	Italian	It32	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision93	Italian	Swedish	Italian	Swedish	Sw43	Planted	7	Soil	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+ReciprocalRevision94	Italian	Swedish	Italian	Italian	It24	Planted	7	Soil	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+ReciprocalRevision95	Italian	Swedish	Italian	Italian	It32	Planted	7	Soil	6months		9	Italian	Changed_soil	Changed_soil_Italian	Italian_Italian	no	yes	no	no
+ReciprocalRevision96	Italian	Swedish	Swedish	Italian	It41	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision97	Italian	Swedish	Swedish	Italian	It15	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Italian	no	no	no	yes
+ReciprocalRevision98	Italian	Swedish	Swedish	Swedish	Sw47	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Swedish	no	no	no	no
+ReciprocalRevision99	Italian	Swedish	Swedish	Swedish	Sw43	Planted	8	Soil	6months		9	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Swedish	no	no	no	no
+S.104.R	Swedish	Italian	Swedish	Swedish	Sw47	Planted	Fourth	Root	8months	2	8	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+S.104.S	Swedish	Italian	Swedish	Swedish	Sw47	Planted	Fourth	Soil	8months	2	7	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+S.110.S	Swedish	Swedish	Italian	Swedish	Deadplant	Planted	Fourth	Soil	8months	2	7	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Swedish	yes	yes	yes	yes
+S.113.R	Swedish	Italian	Swedish	Swedish	Sw7	Planted	Fourth	Root	8months	3	8	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+S.113.S	Swedish	Italian	Swedish	Swedish	Sw7	Planted	Fourth	Soil	8months	3	7	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+S.114.R	Swedish	Italian	None	Swedish	Sw47	Planted	First	Root	8months	2	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+S.114.S	Swedish	Italian	None	Swedish	Sw47	Planted	First	Soil	8months	2	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+S.115.S	Swedish	Swedish	Swedish	Swedish	Deadplant	Planted	Third	Soil	8months	1	7	Swedish	Repopulated	Repopulated_Swedish	Swedish_Swedish	no	no	no	no
+S.119.S	Swedish	Swedish	None	Swedish	Deadplant	Planted	First	Soil	8months	2	7	Swedish	Control	Control_Swedish	Swedish_Swedish	no	no	no	no
+S.131.S	Swedish	Swedish	Swedish	Swedish	Deadplant	Planted	Third	Soil	8months	2	7	Swedish	Repopulated	Repopulated_Swedish	Swedish_Swedish	no	no	no	no
+S.136.S	Swedish	Swedish	None	Swedish	Deadplant	Planted	First	Soil	8months	3	7	Swedish	Control	Control_Swedish	Swedish_Swedish	no	no	no	no
+S.144.S	Swedish	Swedish	Swedish	Swedish	Deadplant	Planted	Third	Soil	8months	3	8	Swedish	Repopulated	Repopulated_Swedish	Swedish_Swedish	no	no	no	no
+S.15.R	Italian	Swedish	Swedish	Swedish	Sw7	Planted	Third	Root	6months	4	8	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Swedish	no	no	no	no
+S.159.R	Swedish	Italian	None	Swedish	Sw7	Planted	First	Root	8months	3	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+S.159.S	Swedish	Italian	None	Swedish	Sw7	Planted	First	Soil	8months	3	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+S.16.R	Italian	Swedish	Italian	Swedish	Sw47	Planted	Fourth	Root	6months	1	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+S.16.S	Italian	Swedish	Italian	Swedish	Sw47	Planted	Fourth	Soil	6months	1	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+S.162.S	Swedish	Swedish	Italian	Swedish	Deadplant	Planted	Fourth	Soil	8months	3	8	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Swedish	yes	yes	yes	yes
+S.163.R	Swedish	Italian	None	Swedish	Sw47	Planted	First	Root	8months	4	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+S.163.S	Swedish	Italian	None	Swedish	Sw47	Planted	First	Soil	8months	4	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+S.169.R	Swedish	Italian	Swedish	Swedish	Sw43	Planted	Fourth	Root	8months	4	8	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+S.169.S	Swedish	Italian	Swedish	Swedish	Sw43	Planted	Fourth	Soil	8months	4	8	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+S.21.R	Italian	Swedish	Swedish	Swedish	Sw47	Planted	Third	Root	6months	1	8	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Swedish	no	no	no	no
+S.24.R	Italian	Italian	Swedish	Swedish	Sw7	Planted	Fourth	Root	6months	1	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+S.24.S	Italian	Italian	Swedish	Swedish	Sw7	Planted	Fourth	Soil	6months	1	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+S.25.R	Italian	Swedish	None	Swedish	Sw7	Planted	First	Root	6months	1	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+S.25.S	Italian	Swedish	None	Swedish	Sw7	Planted	First	Soil	6months	1	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+S.27.R	Italian	Swedish	None	Swedish	Sw43	Planted	First	Root	6months	2	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+S.27.S	Italian	Swedish	None	Swedish	Sw43	Planted	First	Soil	6months	2	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+S.33.R	Italian	Italian	None	Swedish	Sw11	Planted	First	Root	6months	1	5	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+S.33.S	Italian	Italian	None	Swedish	Sw11	Planted	First	Soil	6months	1	5	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+S.35.S	Italian	Italian	Italian	Swedish	Sw47	Planted	Third	Soil	6months	4	5	Italian	Repopulated	Repopulated_Italian	Italian_Swedish	no	no	no	yes
+S.36.R	Italian	Swedish	Swedish	Swedish	Sw43	Planted	Third	Root	6months	2	6	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Swedish	no	no	no	no
+S.39.R	Italian	Swedish	Italian	Swedish	Sw47	Planted	Fourth	Root	6months	2	8	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+S.39.S	Italian	Swedish	Italian	Swedish	Sw47	Planted	Fourth	Soil	6months	2	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+S.48.R	Italian	Italian	Swedish	Swedish	Sw11	Planted	Fourth	Root	6months	2	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+S.48.S	Italian	Italian	Swedish	Swedish	Sw11	Planted	Fourth	Soil	6months	2	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+S.52.R	Italian	Swedish	Italian	Swedish	Sw7	Planted	Fourth	Root	6months	3	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+S.52.S	Italian	Swedish	Italian	Swedish	Sw7	Planted	Fourth	Soil	6months	3	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+S.54.R	Italian	Swedish	Swedish	Swedish	Sw43	Planted	Third	Root	6months	3	8	Swedish	Repopulated_changed_climate	Repopulated_changed_climate_Swedish	Swedish_Swedish	no	no	no	no
+S.62.R	Italian	Italian	Swedish	Swedish	Sw43	Planted	Fourth	Root	6months	3	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+S.62.S	Italian	Italian	Swedish	Swedish	Sw43	Planted	Fourth	Soil	6months	3	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+S.63.R	Italian	Swedish	None	Swedish	Sw7	Planted	First	Root	6months	3	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+S.63.S	Italian	Swedish	None	Swedish	Sw7	Planted	First	Soil	6months	3	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+S.70.R	Italian	Italian	None	Swedish	Sw47	Planted	First	Root	6months	2	5	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+S.70.S	Italian	Italian	None	Swedish	Sw47	Planted	First	Soil	6months	2	5	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+S.75.R	Italian	Italian	Swedish	Swedish	Sw47	Planted	Fourth	Root	6months	4	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+S.75.S	Italian	Italian	Swedish	Swedish	Sw47	Planted	Fourth	Soil	6months	4	6	Swedish	Changed_soil_climate	Changed_soil_climate_Swedish	Swedish_Swedish	yes	yes	yes	no
+S.77.R	Italian	Swedish	Italian	Swedish	Sw43	Planted	Fourth	Root	6months	4	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+S.77.S	Italian	Swedish	Italian	Swedish	Sw43	Planted	Fourth	Soil	6months	4	6	Italian	Changed_soil	Changed_soil_Italian	Italian_Swedish	no	yes	no	yes
+S.78.R	Italian	Swedish	None	Swedish	Sw47	Planted	First	Root	6months	4	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+S.78.S	Italian	Swedish	None	Swedish	Sw47	Planted	First	Soil	6months	4	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	yes	no	no	no
+S.86.R	Italian	Italian	None	Swedish	Sw7	Planted	First	Root	6months	3	5	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+S.86.S	Italian	Italian	None	Swedish	Sw7	Planted	First	Soil	6months	3	5	Italian	Control	Control_Italian	Italian_Swedish	no	no	no	no
+S.91.R	Swedish	Italian	Swedish	Swedish	Sw11	Planted	Fourth	Root	8months	1	8	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+S.91.S	Swedish	Italian	Swedish	Swedish	Sw11	Planted	Fourth	Soil	8months	1	7	Swedish	Changed_soil	Changed_soil_Swedish	Swedish_Swedish	no	yes	no	no
+S.94.R	Swedish	Italian	None	Swedish	Sw11	Planted	First	Root	8months	1	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+S.94.S	Swedish	Italian	None	Swedish	Sw11	Planted	First	Soil	8months	1	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	yes	no	no	no
+S.95.S	Swedish	Swedish	Italian	Swedish	Deadplant	Planted	Fourth	Soil	8months	1	7	Italian	Changed_soil_climate	Changed_soil_climate_Italian	Italian_Swedish	yes	yes	yes	yes
+S.99.S	Swedish	Swedish	None	Swedish	Deadplant	Planted	First	Soil	8months	1	7	Swedish	Control	Control_Swedish	Swedish_Swedish	no	no	no	no
+Soil.Wash.Ita.3	None	None	Italian	None	None	None	None	Wash	0weeks	1	1	Italian	Soil_wash	Soil_wash_Italian	Italian_None	no	no	no	yes
+Soil.Wash.Ita.4	None	None	Italian	None	None	None	None	Wash	0weeks	3	1	Italian	Soil_wash	Soil_wash_Italian	Italian_None	no	no	no	yes
+Soil.Wash.Ita.5	None	None	Italian	None	None	None	None	Wash	0weeks	2	1	Italian	Soil_wash	Soil_wash_Italian	Italian_None	no	no	no	yes
+Soil.Wash.Swe4.3	None	None	Swedish	None	None	None	None	Wash	0weeks	2	1	Swedish	Soil_wash	Soil_wash_Swedish	Swedish_None	no	no	no	yes
+Soil.Wash.Swe4.4	None	None	Swedish	None	None	None	None	Wash	0weeks	1	1	Swedish	Soil_wash	Soil_wash_Swedish	Swedish_None	no	no	no	yes
+Soil.Wash.Swe4.5	None	None	Swedish	None	None	None	None	Wash	0weeks	3	1	Swedish	Soil_wash	Soil_wash_Swedish	Swedish_None	no	no	no	yes
+Swe4.Treat.1	None	Swedish	None	None	None	None	First	Soil	0weeks	1	1	Swedish	Test	Test_Swedish	Swedish_None	no	no	no	no
+Swe4.Treat.3	None	Swedish	Swedish	None	None	None	Third	Soil	0weeks	1	1	Swedish	Test_repopulated	Test_repopulated_Swedish	Swedish_None	no	no	no	yes
+Swe4.Treat.4	None	Swedish	Italian	None	None	None	Fourth	Soil	0weeks	1	1	Italian	Test_changed_soil	Test_changed_soil_Italian	Italian_None	no	no	no	yes

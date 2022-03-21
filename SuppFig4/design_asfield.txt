@@ -1,0 +1,100 @@
+SampleID	Chamber	Soil	Wash	Genotype	Parentalline	Planted	Treatment	Fraction	Incubationtime	Replicate	Library	Microbe	Condition	Condition_microbe	Microbe_planted	Soil_Fraction	Climate_soil
+6month.33	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	6months	2	5	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+6month.38	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	6months	1	5	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+6month.70	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	6months	3	5	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+8month.114	Swedish	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	2	7	Italian	Changed_climate	Changed_climate_Italian	Italian_Unplanted	Italian_Soil	Swedish_Italian
+8month.120	Swedish	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	1	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Unplanted	Italian_Soil	Swedish_Italian
+8month.159	Swedish	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	3	7	Italian	Changed_climate	Changed_climate_Italian	Italian_Unplanted	Italian_Soil	Swedish_Italian
+8month.33	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	2	7	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+8month.35	Italian	Italian	Italian	Unplanted	Unplanted	Unplanted	Third	Soil	8months	2	7	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+8month.38	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	3	7	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+8month.66	Italian	Italian	None	Unplanted	Unplanted	Unplanted	First	Soil	8months	1	7	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+I.106.S	Swedish	Italian	None	Italian	Deadplant	Planted	First	Soil	8months	1	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	Italian_Soil	Swedish_Italian
+I.118.S	Swedish	Italian	None	Italian	Deadplant	Planted	First	Soil	8months	2	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	Italian_Soil	Swedish_Italian
+I.119.S	Swedish	Swedish	None	Italian	Deadplant	Planted	First	Soil	8months	2	8	Swedish	Control	Control_Swedish	Swedish_Italian	Swedish_Soil	Swedish_Swedish
+I.120.S	Swedish	Italian	None	Italian	Deadplant	Planted	First	Soil	8months	3	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	Italian_Soil	Swedish_Italian
+I.136.S	Swedish	Swedish	None	Italian	Deadplant	Planted	First	Soil	8months	3	8	Swedish	Control	Control_Swedish	Swedish_Italian	Swedish_Soil	Swedish_Swedish
+I.25.R	Italian	Swedish	None	Italian	It24	Planted	First	Root	6months	1	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Root	Italian_Swedish
+I.25.S	Italian	Swedish	None	Italian	It24	Planted	First	Soil	6months	1	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Soil	Italian_Swedish
+I.27.R	Italian	Swedish	None	Italian	It32	Planted	First	Root	6months	2	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Root	Italian_Swedish
+I.27.S	Italian	Swedish	None	Italian	It32	Planted	First	Soil	6months	2	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Soil	Italian_Swedish
+I.32.R	Italian	Italian	None	Italian	It24	Planted	First	Root	6months	1	5	Italian	Control	Control_Italian	Italian_Italian	Italian_Root	Italian_Italian
+I.32.S	Italian	Italian	None	Italian	It24	Planted	First	Soil	6months	1	5	Italian	Control	Control_Italian	Italian_Italian	Italian_Soil	Italian_Italian
+I.33.R	Italian	Italian	None	Italian	It32	Planted	First	Root	6months	2	5	Italian	Control	Control_Italian	Italian_Italian	Italian_Root	Italian_Italian
+I.33.S	Italian	Italian	None	Italian	It32	Planted	First	Soil	6months	2	5	Italian	Control	Control_Italian	Italian_Italian	Italian_Soil	Italian_Italian
+I.49.R	Italian	Italian	None	Italian	It32	Planted	First	Root	6months	3	5	Italian	Control	Control_Italian	Italian_Italian	Italian_Root	Italian_Italian
+I.49.S	Italian	Italian	None	Italian	It32	Planted	First	Soil	6months	3	5	Italian	Control	Control_Italian	Italian_Italian	Italian_Soil	Italian_Italian
+I.70.R	Italian	Italian	None	Italian	It15	Planted	First	Root	6months	4	5	Italian	Control	Control_Italian	Italian_Italian	Italian_Root	Italian_Italian
+I.70.S	Italian	Italian	None	Italian	It15	Planted	First	Soil	6months	4	5	Italian	Control	Control_Italian	Italian_Italian	Italian_Soil	Italian_Italian
+I.78.R	Italian	Swedish	None	Italian	It32	Planted	First	Root	6months	3	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Root	Italian_Swedish
+I.78.S	Italian	Swedish	None	Italian	It32	Planted	First	Soil	6months	3	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Soil	Italian_Swedish
+I.84.R	Italian	Swedish	None	Italian	It15	Planted	First	Root	6months	4	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Root	Italian_Swedish
+I.84.S	Italian	Swedish	None	Italian	It15	Planted	First	Soil	6months	4	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Soil	Italian_Swedish
+I.99.S	Swedish	Swedish	None	Italian	Deadplant	Planted	First	Soil	8months	1	8	Swedish	Control	Control_Swedish	Swedish_Italian	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision100	Swedish	Italian	none	Italian	It15	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	Italian_Soil	Swedish_Italian
+ReciprocalRevision102	Swedish	Italian	none	Italian	It15	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	Italian_Soil	Swedish_Italian
+ReciprocalRevision111	Italian	Swedish	none	Italian	It24	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Soil	Italian_Swedish
+ReciprocalRevision112	Italian	Swedish	none	Italian	It32	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Soil	Italian_Swedish
+ReciprocalRevision113	Swedish	Italian	none	Swedish	Sw47	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Soil	Swedish_Italian
+ReciprocalRevision114	Swedish	Italian	none	Swedish	Sw7	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Soil	Swedish_Italian
+ReciprocalRevision115	Italian	Swedish	none	Italian	It41	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Soil	Italian_Swedish
+ReciprocalRevision116	Italian	Italian	none	Swedish	Sw43	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Swedish	Italian_Soil	Italian_Italian
+ReciprocalRevision117	Italian	Italian	none	Italian	It32	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Italian	Italian_Soil	Italian_Italian
+ReciprocalRevision118	Italian	Swedish	none	Swedish	Sw7	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Soil	Italian_Swedish
+ReciprocalRevision119	Italian	Swedish	none	Swedish	Sw7	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Soil	Italian_Swedish
+ReciprocalRevision120	Italian	Swedish	none	Swedish	Sw47	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Soil	Italian_Swedish
+ReciprocalRevision121	Italian	Swedish	none	Swedish	Sw7	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Soil	Italian_Swedish
+ReciprocalRevision124	Swedish	Swedish	none	Swedish	It	Planted	First	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision127	Swedish	Swedish	none	Italian	It15	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Italian	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision128	Swedish	Swedish	none	Swedish	Sw43	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision129	Italian	Italian	none	Swedish	Sw11	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Swedish	Italian_Soil	Italian_Italian
+ReciprocalRevision130	Italian	Italian	none	Swedish	Sw47	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Swedish	Italian_Soil	Italian_Italian
+ReciprocalRevision131	Italian	Italian	none	Italian	It24	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Italian	Italian_Soil	Italian_Italian
+ReciprocalRevision132	Italian	Italian	none	Italian	It24	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Italian	Italian_Soil	Italian_Italian
+ReciprocalRevision133	Italian	Italian	none	Swedish	Sw11	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Swedish	Italian_Soil	Italian_Italian
+ReciprocalRevision136	Italian	Swedish	none	Italian	It15	Planted	5	Soil	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Soil	Italian_Swedish
+ReciprocalRevision144	Swedish	Swedish	none	Italian	It15	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Italian	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision146	Swedish	Swedish	none	Swedish	Sw7	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision148	Swedish	Swedish	none	Italian	It32	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Italian	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision154	Swedish	Swedish	none	Swedish	Sw43	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision157	Italian	Swedish	none	Italian	It15	Planted	5	Root	6months		9	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Italian	Swedish_Root	Italian_Swedish
+ReciprocalRevision164	Italian	Italian	none	Italian	It32	Planted	1	Root	6months		9	Italian	Control	Control_Italian	Italian_Italian	Italian_Root	Italian_Italian
+ReciprocalRevision20	Swedish	Italian	none	Unplanted	Sw11	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Unplanted	Italian_Soil	Swedish_Italian
+ReciprocalRevision22	Swedish	Italian	none	Italian	It32	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	Italian_Soil	Swedish_Italian
+ReciprocalRevision37	Italian	Italian	none	Unplanted	Unplanted	Unplanted	First	Soil	NA		9	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+ReciprocalRevision38	Italian	Italian	none	Unplanted	Sw11	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+ReciprocalRevision39	Italian	Italian	none	Unplanted	It24	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+ReciprocalRevision40	Italian	Italian	none	Unplanted	Sw11	Planted	1	Soil	6months		9	Italian	Control	Control_Italian	Italian_Unplanted	Italian_Soil	Italian_Italian
+ReciprocalRevision51	Swedish	Italian	none	Swedish	Sw11	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Soil	Swedish_Italian
+ReciprocalRevision52	Swedish	Italian	none	Italian	It15	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	Italian_Soil	Swedish_Italian
+ReciprocalRevision53	Swedish	Italian	none	Italian	It24	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Italian	Italian_Soil	Swedish_Italian
+ReciprocalRevision54	Swedish	Italian	none	Swedish	Sw11	Planted	12	Soil	8months		9	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Soil	Swedish_Italian
+ReciprocalRevision62	Swedish	Swedish	none	Italian	It41	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Italian	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision65	Swedish	Swedish	none	Swedish	Sw7	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision68	Swedish	Swedish	none	Swedish	Sw43	Planted	16	Soil	8months		9	Swedish	Control	Control_Swedish	Swedish_Swedish	Swedish_Soil	Swedish_Swedish
+ReciprocalRevision82	Italian	Italian	none	Swedish	Sw	Planted	First	Root	NA		9	Italian	Control	Control_Italian	Italian_Swedish	Italian_Root	Italian_Italian
+S.114.R	Swedish	Italian	None	Swedish	Sw47	Planted	First	Root	8months	2	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Root	Swedish_Italian
+S.114.S	Swedish	Italian	None	Swedish	Sw47	Planted	First	Soil	8months	2	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Soil	Swedish_Italian
+S.119.S	Swedish	Swedish	None	Swedish	Deadplant	Planted	First	Soil	8months	2	7	Swedish	Control	Control_Swedish	Swedish_Swedish	Swedish_Soil	Swedish_Swedish
+S.136.S	Swedish	Swedish	None	Swedish	Deadplant	Planted	First	Soil	8months	3	7	Swedish	Control	Control_Swedish	Swedish_Swedish	Swedish_Soil	Swedish_Swedish
+S.159.R	Swedish	Italian	None	Swedish	Sw7	Planted	First	Root	8months	3	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Root	Swedish_Italian
+S.159.S	Swedish	Italian	None	Swedish	Sw7	Planted	First	Soil	8months	3	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Soil	Swedish_Italian
+S.163.R	Swedish	Italian	None	Swedish	Sw47	Planted	First	Root	8months	4	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Root	Swedish_Italian
+S.163.S	Swedish	Italian	None	Swedish	Sw47	Planted	First	Soil	8months	4	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Soil	Swedish_Italian
+S.25.R	Italian	Swedish	None	Swedish	Sw7	Planted	First	Root	6months	1	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Root	Italian_Swedish
+S.25.S	Italian	Swedish	None	Swedish	Sw7	Planted	First	Soil	6months	1	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Soil	Italian_Swedish
+S.27.R	Italian	Swedish	None	Swedish	Sw43	Planted	First	Root	6months	2	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Root	Italian_Swedish
+S.27.S	Italian	Swedish	None	Swedish	Sw43	Planted	First	Soil	6months	2	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Soil	Italian_Swedish
+S.33.R	Italian	Italian	None	Swedish	Sw11	Planted	First	Root	6months	1	5	Italian	Control	Control_Italian	Italian_Swedish	Italian_Root	Italian_Italian
+S.33.S	Italian	Italian	None	Swedish	Sw11	Planted	First	Soil	6months	1	5	Italian	Control	Control_Italian	Italian_Swedish	Italian_Soil	Italian_Italian
+S.63.R	Italian	Swedish	None	Swedish	Sw7	Planted	First	Root	6months	3	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Root	Italian_Swedish
+S.63.S	Italian	Swedish	None	Swedish	Sw7	Planted	First	Soil	6months	3	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Soil	Italian_Swedish
+S.70.R	Italian	Italian	None	Swedish	Sw47	Planted	First	Root	6months	2	5	Italian	Control	Control_Italian	Italian_Swedish	Italian_Root	Italian_Italian
+S.70.S	Italian	Italian	None	Swedish	Sw47	Planted	First	Soil	6months	2	5	Italian	Control	Control_Italian	Italian_Swedish	Italian_Soil	Italian_Italian
+S.78.R	Italian	Swedish	None	Swedish	Sw47	Planted	First	Root	6months	4	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Root	Italian_Swedish
+S.78.S	Italian	Swedish	None	Swedish	Sw47	Planted	First	Soil	6months	4	5	Swedish	Changed_climate	Changed_climate_Swedish	Swedish_Swedish	Swedish_Soil	Italian_Swedish
+S.86.R	Italian	Italian	None	Swedish	Sw7	Planted	First	Root	6months	3	5	Italian	Control	Control_Italian	Italian_Swedish	Italian_Root	Italian_Italian
+S.86.S	Italian	Italian	None	Swedish	Sw7	Planted	First	Soil	6months	3	5	Italian	Control	Control_Italian	Italian_Swedish	Italian_Soil	Italian_Italian
+S.94.R	Swedish	Italian	None	Swedish	Sw11	Planted	First	Root	8months	1	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Root	Swedish_Italian
+S.94.S	Swedish	Italian	None	Swedish	Sw11	Planted	First	Soil	8months	1	6	Italian	Changed_climate	Changed_climate_Italian	Italian_Swedish	Italian_Soil	Swedish_Italian
+S.99.S	Swedish	Swedish	None	Swedish	Deadplant	Planted	First	Soil	8months	1	7	Swedish	Control	Control_Swedish	Swedish_Swedish	Swedish_Soil	Swedish_Swedish

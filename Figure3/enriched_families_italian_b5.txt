@@ -1,0 +1,59 @@
+Repopulated_Italian_vs_Repopulated_changed_climate_Italian	Repopulated_Italian_vs_Changed_soil_climate_Italian	Repopulated_Italian_vs_Changed_soil_Italian
+ f__KD3-93	 f__Blastocatellaceae	 f__Mycobacteriaceae
+ f__Nitrosomonadaceae	 f__Mycobacteriaceae	 f__Solibacteraceae
+ f__Silvanigrellaceae	 f__Nitrospiraceae	 f__Beijerinckiaceae
+ f__Fodinicurvataceae	 f__Pedosphaeraceae	 f__Nocardioidaceae
+ f__AKYH767	 f__Burkholderiaceae	 f__Nitrospiraceae
+ f__JG30-KF-CM45	 f__cvE6	 f__Pedosphaeraceae
+ f__Blastocatellaceae	 f__env.OPS_17	 f__Spirosomaceae
+ f__Microscillaceae	 f__AKYH767	 f__Burkholderiaceae
+ f__Parachlamydiaceae	 f__Inquilinaceae	 f__Devosiaceae
+ f__Nocardiaceae	 f__Beijerinckiaceae	 f__AKYH767
+ f__Ardenticatenaceae	 f__Labraceae	 f__Planococcaceae
+ f__Micromonosporaceae	 f__Sandaracinaceae	 f__Kaistiaceae
+ f__A4b	 f__Alicyclobacillaceae	 f__cvE6
+	 f__Flavobacteriaceae	 f__Cytophagaceae
+	 f__Microscillaceae	 f__A21b
+	 f__Solibacteraceae	 f__Intrasporangiaceae
+	 f__Acetobacteraceae	 f__Geminicoccaceae
+	 f__NS11-12_marine_group	 f__Polyangiaceae
+	 f__Phaselicystidaceae	 f__Diplorickettsiaceae
+	 f__Chitinophagaceae	 f__Unknown_Family
+	 f__Gemmatimonadaceae	 f__Sandaracinaceae
+	 f__SM2D12	 f__Solirubrobacteraceae
+	 f__Planococcaceae	 f__Phaselicystidaceae
+	 f__Rickettsiaceae	 f__Inquilinaceae
+	 f__Verrucomicrobiaceae	 f__Abditibacteriaceae
+	 f__Herpetosiphonaceae	 f__NS11-12_marine_group
+	 f__Cytophagaceae	 f__Rhizobiaceae
+	 f__Geminicoccaceae	 f__Gemmatimonadaceae
+	 f__Fodinicurvataceae	 f__Rickettsiaceae
+	 f__Rickettsiales_fa	 f__Simkaniaceae
+	 f__Microbacteriaceae	 f__Coxiellaceae
+	 f__Spirosomaceae	 f__Nitrosomonadaceae
+	 f__Solirubrobacteraceae	 f__Blastocatellaceae
+	 f__Bacillaceae	 f__Vulgatibacteraceae
+	 f__Chthoniobacteraceae	 f__Bdellovibrionaceae
+	 f__Rhizobiaceae	 f__Micromonosporaceae
+	 f__KD3-93	 f__Bacteriovoracaceae
+	 f__Ilumatobacteraceae	 f__Comamonadaceae
+	 f__Bacteriovoracaceae	 f__Microscillaceae
+	 f__Nocardioidaceae	 f__Haliangiaceae
+	 f__Saccharimonadaceae	 f__Xanthobacteraceae
+	 f__Caulobacteraceae	 f__Oligoflexales_fa
+	 f__Bdellovibrionaceae	 f__Chitinophagaceae
+	 f__Terrimicrobiaceae	 f__Saccharimonadaceae
+	 f__Nitrosomonadaceae	 f__Rickettsiales_fa
+	 f__Sphingobacteriaceae	 f__Brevibacillaceae
+	 f__AKIW781	 f__Xanthomonadaceae
+	 f__A21b	 f__Pseudonocardiaceae
+	 f__Rhodobacteraceae	 f__Roseiflexaceae
+	 f__Xanthomonadaceae	 f__Microbacteriaceae
+	 f__Pyrinomonadaceae	 f__Labraceae
+	 f__Xiphinematobacteraceae	 f__Solimonadaceae
+	 f__Brevibacillaceae	 f__Chthoniobacteraceae
+	 f__Oxalobacteraceae	
+	 f__Micromonosporaceae	
+	 f__Simkaniaceae	
+	 f__Roseiflexaceae	
+	 f__Vulgatibacteraceae	
