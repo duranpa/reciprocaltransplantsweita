@@ -1,15 +1,12 @@
 ---
 title: "Plant fitness"
 author: ""
-date: "21st December/2021"
+date: "21st December 2021"
 output:
-  bookdown:::word_document2:
   bookdown::pdf_book:
     toc: no
     keep_tex: no
     number_sections: false
-
-
 ---
 
 ```{r setup, include=FALSE}
@@ -46,18 +43,57 @@ Table \@ref(tab:anova-reinoculated) shows ANOVA results for plant fitness as a f
 
 (ref:anova) Analysis of variance in plant fitness on reinoculated soils. Plant fitness is the block-mean of each genotype, and modelled as a function of climate chamber, plant genotype, recipient soil and microbial inoculum, plus all two-, three- and four-way interactions. Block is included as a random effect.
 
+```{r}
+gnoto %>%
+  filter(Soil %in% c("Italy", "Sweden"), Tea %in% c("Italy", "Sweden"), Sterile == 1) %>%
+  mutate(r = paste0(Climate, tub)) %>% 
+  lmer(formula = fruits_per_seedling ~ Climate * (geno * Soil * Tea) + plants_per_block + (1 | tub)) %>% 
+  anova
+
+gnoto %>%
+  filter(Soil %in% c("Italy", "Sweden"), Tea %in% c("Italy", "Sweden"), Sterile == 1) %>%
+  mutate(r = paste0(Climate, tub)) %>% 
+  lmer(formula = fruits_per_seedling ~ 
+         plants_per_block + (1 | tub) +
+         (1 | Climate) + (1 | geno) + (1| Soil) + (1 | Tea) +
+         (1 | Climate : geno) + (1 | Climate : Soil) + (1 | Climate : Tea) +
+         (1 | geno : Soil) + (1 | geno : Tea) +
+         (1 | Soil : Tea) +
+         (1 | Climate : geno : Soil) + (1 | Climate : geno : Tea) + (1 | Tea : geno : Soil) +
+         (1 | Climate : geno : Soil : Tea)
+       ) %>%
+  summary
+
+
+
+gnoto %>%
+  # mutate(r = paste0(geno, Soil, Tea)) %>% 
+  filter(Soil %in% c("Italy", "Sweden"), Tea %in% c("Italy", "Sweden"), Sterile == 1) %>%
+  aov(
+  formula = 
+    fruits_per_seedling ~ Climate * geno * Soil * Tea + Error(Climate/tub)
+) %>% summary()
+
+
+gnoto %>%
+  filter(Soil %in% c("Italy", "Sweden"), Tea %in% c("Italy", "Sweden"), Sterile == 1) %>%
+  mutate(r = paste0(Climate, tub)) %>% 
+  aov(
+  formula = 
+    fruits_per_seedling ~ Climate * geno * Soil * Tea + plants_per_block + Error(r) 
+) %>% summary()
+
+```
+
 ```{r anova-reinoculated}
 anova$reinoculated <- gnoto %>%
   filter(Soil %in% c("Italy", "Sweden"), Tea %in% c("Italy", "Sweden"), Sterile == 1) %>%
   lmer(formula = fruits_per_seedling ~ Climate * geno * Soil * Tea + plants_per_block + (1 | tub)) %>% 
   anova %>% 
   mutate(`Var. explained` = `Sum Sq` / sum(`Sum Sq`))
-  
 
 knitr::kable(anova$reinoculated, digits = 3,
              caption = "(ref:anova)")
-
-
 ```
 
 (ref:reinoculated) Plant fitness on reinoculated soils. (A) Illustration of the treatments being compared. (B) variance in number of seeds per seedling planted explained in a model including climate chamber, plant genotype, recipient soil, microbial inoculum, and all two-, three- and four-way interactions. Non-significant terms are grouped as 'other terms'. (C) Interaction plots showing plant fitness in each treatment.
@@ -119,12 +155,14 @@ reinoculated$pve <-data.frame(
     y = "% var. explained"
   )
 
-
-reinoculated$interaction <- gnoto %>% 
+pd = position_dodge(0.0)
+reinoculated$interaction <-gnoto %>% 
   filter(Soil %in% c("Italy", "Sweden"), Tea %in% c("Italy", "Sweden"), Sterile == 1) %>% 
   group_by(Climate, Soil, Tea, geno, Sterile) %>% 
   summarise(
-    mean = mean(fruits_per_seedling)
+    mean = mean(fruits_per_seedling),
+    sd   = sd(fruits_per_seedling),
+    se    = sd / sqrt(n()-1)
   ) %>% 
   mutate(
     Soil = ifelse(Soil == "Italy", "Italian soil", "Swedish soil"),
@@ -135,8 +173,10 @@ reinoculated$interaction <- gnoto %>%
     x = Climate, y = mean, colour = Genotype,
     shape = Inoculum, group= paste(Genotype, Inoculum),
   )) +
-  geom_point(size = 3) + 
-  geom_line() +
+  geom_point(size = 3, position = pd) + 
+  geom_line(position = pd) +
+  geom_errorbar(
+    aes(ymin=mean-se, ymax=mean+se), width=.1, position = pd) +
   facet_grid(~ Soil) +
   theme_bw() + 
   scale_colour_manual(values = c('#eb624c', '#1d3d90ff')) +
@@ -235,6 +275,16 @@ anova$native %>%
   )
 ```
 
+```{r}
+gnoto %>%
+  filter(Soil %in% c("Italy", "Sweden"), Sterile == 0) %>% 
+  aov(
+  formula = 
+    fruits_per_seedling ~ Climate * geno * Soil + plants_per_block + Error(Climate/tub)
+) %>% summary()
+```
+
+
 (ref:field) Analysis of variance of plant fitness on native, non-autoclaved soils in the chamber experiment, and the field experiment presented by Thiergart *et al.* (2020). Block-mean fitness of each genotype is modelled as a function of experimental site, plant genotype, and recipient soil, plus all two- and three-way interactions. Block is included as a random effect.
 
 ```{r anova-field}
@@ -249,18 +299,23 @@ anova$field <- field %>%
   anova() %>% 
   mutate(`Var. explained` = `Sum Sq` / sum(`Sum Sq`))
 
-
-# anova$field <- lmer(formula = fruits_per_seedling ~ Site * Genotype * Soil + (1|Tray), data = field) %>% 
-#   anova() %>% 
-#   mutate(`Var. explained` = `Sum Sq` / sum(`Sum Sq`))
-
 knitr::kable(
   anova$field,
   digits = 3,
   caption = "(ref:field)"
 )
 
+field %>% 
+  mutate(Block = paste(Site, Block, sep="_")) %>% 
+  group_by(Block, Site, Soil, Genotype) %>% 
+  summarise(
+    fruits_per_seedling = mean(fruits_per_seedling),
+    n =
+  )
+
 ```
+
+
 
 ```{r field-vs-native, fig.cap="Plant fitness on native, non-autoclaved soils in the chamber experiment (A, C, E), and the field experiment presented by Thiergart *et al.* (2020) (B, D, F).  (A, B) Illustration of the treatments being compared. (C, D) variance in number of seeds per seedling planted explained in a model including climate chamber, plant genotype, recipient soil, whether soils were sterilised or not, and all two-, three- and four-way interactions. Non-significant terms are grouped as 'other terms'. (E, F) Interaction plots showing plant fitness in each treatment level showing Italian (red) and Swedish (blue) genotypes grown on Italian (circles) and Swedish (triangles) soils."}
 
@@ -444,6 +499,14 @@ sterilised$trt<- recordPlot()
 ```
 
 ```{r nsr-means}
+
+gnoto %>% 
+  filter(! trt %in% c(4,7, 15, 19)) %>% 
+  group_by(Soil, Sterile) %>% 
+  summarise(
+    mean = mean(fruits_per_seedling)
+  )
+
 sterilised$means <- gnoto %>% 
   filter(! trt %in% c(4,7, 15, 19)) %>% 
   group_by(Climate, Soil, Sterile, Tea, geno) %>% 
@@ -454,8 +517,8 @@ sterilised$means <- gnoto %>%
     Soil = ifelse(Soil == "Italy", "Italian soil", "Swedish soil"),
     Genotype = ifelse(geno == "It", "Italian", "Swedish"),
     Treatment = ifelse(Sterile == 0, "Native", "Sterile"),
-    Treatment = ifelse(Tea != "No", "Reinoculated", Treatment),
-    Treatment = fct_relevel(Treatment, "Sterile", after = 2)
+    Treatment = ifelse(Tea != "No", "Reinoculated", Treatment)
+    # Treatment = fct_relevel(Treatment, "Sterile", after = 2)
   ) %>% 
   rename(Chamber = Climate) %>%
   ggplot(aes(
