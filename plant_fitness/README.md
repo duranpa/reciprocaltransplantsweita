@@ -12,6 +12,7 @@ Data files:
   + `Soil`: Soil matrix
   + `Genotype`: Plant genotype
   + `fruits_per_seedling`: Plant fitness, measured as number of fruits produced.
+
 - `gnotobiotic_expt_fitness_data.csv`: Block-mean fitness data from the growth-chamber experiment, showing:
   + `trt`: Numerical code indicating overall soil treatment
   + `Climate`: Growth-chamber climate program.
@@ -23,7 +24,10 @@ Data files:
   + `fruits_per_seedling`: Plant fitness; number of fruits produced divided by the number of seedlings planted (that survived transplant shock)
   + `plants_per_block`: Number of plants of this genotype in the block surviving transplant shock.
 
-ANOVA models and figures are created with the Rmarkdown file `plant_fitness.Rmd`.
+ANOVA models were run by Jon Ågren in JMP.
+The results for the "main analysis" comparing reinoculated soils are in `ANOVA_results_reinoculated_soils.csv`.
+This only contains results for an analysis where all factors are coded as random to estimate variance components.
+
 Note that for publication figures were further edited in Adobe Illustrator by Stéphane Hacquard.
 
 Full details of the R session is given in `session_info.txt`.
