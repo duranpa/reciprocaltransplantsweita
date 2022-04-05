@@ -1,4 +1,4 @@
-Site,Tray,Block,Pos,Soil,Genotype,fruits_per_seedling
+location,tray,block,pos,soil,genotype,fruits_per_seedling
 Italy,1,1,1,Sw,Italy,16
 Italy,1,1,2,Sw,Sweden,0
 Italy,1,1,3,Sw,Sweden,0

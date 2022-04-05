@@ -1,4 +1,4 @@
-trt,Climate,SoilTrmt,Soil,Sterile,Tea,geno,tub,fruits_per_seedling,plants_per_block
+trt,chamber,SoilTrmt,soil,autoclaved,inoculum,genotype,block,fruits_per_seedling,plants_per_block
 1,Italian,1,Italy,0,No,It,32,5.25,2
 1,Italian,1,Italy,0,No,It,33,6.5,2
 1,Italian,1,Italy,0,No,It,38,0,2
